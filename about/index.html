@@ -10,7 +10,7 @@
   
   <title>
     
-      呆木
+      About | 呆木
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -137,43 +137,53 @@
   </div>
 </header>
 
-    <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">文章归档</p>
-</div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2018
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2018/06/04/test/" class="archive-title">test</a>
-        <p class="archive-date">06-04</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2018/06/04/hello-world/" class="archive-title">Hello World</a>
-        <p class="archive-date">06-04</p>
-      </div>
-    
+    <div id="about-banner" style="background-image: url(http://file.muyutech.com/about.jpg)"></div>
+<div class="author">
+  <div class="head">
+    <img src="https://avatars0.githubusercontent.com/u/16952427?s=400&u=bbc39c00ef4e93bcf352eb509c3595dbbb4c4c89&v=4" />
   </div>
-</section>
+  <h3>呆木</h3>
   
-</main>
+    <p class="description">学习使我快乐 (*^▽^*)</p>
+  
+  <section class="share-icons">
+    
+    
+    
+      <a class="icon-github" href="https://github.com/liu5855019" target="_blank">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    
+    
+    
+    
+      <a class="icon-jianshu" href="https://www.jianshu.com/u/5e62304d7f31" target="_blank">
+          <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-stack-1x fa-inverse">简</i>
+          </span>
+      </a>
+  
+  </section>
+</div>
 
 <script>
   (function () {
-    var url = 'liu5855019.github.io/archives/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
+    $('.header').removeClass('fixed-header')
+    var windowH = $(window).height();
+    var author = $('.author')
+    var bodyH = author.offset().top + author[0].offsetHeight + 71;
+    if (bodyH < windowH) {
+      author.css({
+        'margin-bottom': windowH - bodyH
+      })
+    }
   })();
 </script>
+
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
