@@ -3,26 +3,32 @@
   <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="呆木的博客">
+  <meta name="description" content="yanm1ng&#39;s blog">
   <meta name="keyword" content="hexo-theme, vuejs">
   
-    <link rel="shortcut icon" type="image/ico" href="/image/favicon.jpg"/> 
+    <link rel="shortcut icon" href="/css/images/logo.png">
   
   <title>
     
-      呆木
+      Hexo
     
   </title>
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/plugins/gitment.css">
-  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/js/qrious.js"></script>
+
+  
+  
   
   
     <!-- MathJax support START -->
@@ -44,54 +50,72 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- MathJax support END -->
   
 
 
-</head>
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
 <div class="wechat-share">
   <img src="/css/images/logo.png" />
 </div>
-
   <body>
     <header class="header fixed-header">
   <div class="header-container">
     <a class="home-link" href="/">
       <div class="logo"></div>
-      <span>呆木</span>
+      <span>Hexo</span>
     </a>
     <ul class="right-list">
       
         <li class="list-item">
           
-            <a href="/" class="item-link active">首页</a>
+            <a href="/" class="item-link active">Home</a>
           
         </li>
       
         <li class="list-item">
           
-            <a href="/tags/" class="item-link">标签</a>
+            <a href="/series/" class="item-link">Series</a>
           
         </li>
       
         <li class="list-item">
           
-            <a href="/archives/" class="item-link">归档</a>
+            <a href="/tags/" class="item-link">Tags</a>
           
         </li>
       
         <li class="list-item">
           
-            <a href="/project/" class="item-link">项目</a>
+            <a href="/archives/" class="item-link">Archives</a>
           
         </li>
       
         <li class="list-item">
           
-            <a href="/about/" class="item-link">关于</a>
+            <a href="/project/" class="item-link">Projects</a>
           
         </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
       
     </ul>
     <div class="menu">
@@ -104,36 +128,66 @@
         
           <li class="menu-item">
             
-              <a href="/" class="menu-link mobile-active">首页</a>
+              <a href="/" class="menu-link mobile-active">Home</a>
             
           </li>
         
           <li class="menu-item">
             
-              <a href="/tags/" class="menu-link">标签</a>
+              <a href="/series/" class="menu-link">Series</a>
             
           </li>
         
           <li class="menu-item">
             
-              <a href="/archives/" class="menu-link">归档</a>
+              <a href="/tags/" class="menu-link">Tags</a>
             
           </li>
         
           <li class="menu-item">
             
-              <a href="/project/" class="menu-link">项目</a>
+              <a href="/archives/" class="menu-link">Archives</a>
             
           </li>
         
           <li class="menu-item">
             
-              <a href="/about/" class="menu-link">关于</a>
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
             
           </li>
         
       </ul>
     </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
   </div>
 </header>
 
@@ -141,30 +195,127 @@
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2018/06/04/test/">test</a>
+        <a href="/2022/09/21/dotnet/dotnet_setNuget/">dotnet set nuget</a>
       </h2>
-      <p class="article-date">June 4, 2018</p>
+      <p class="article-date">September 21, 2022</p>
+      
+        
+  <a href="/tags#dotnet" >
+    <span class="tag-code">dotnet</span>
+  </a>
+
       
       <div class="article-summary">
         
-          
+          dotnet nuget
+add
+1dotnet nuget add source &#123;url&#125; -n &#123;name&#125;
+
+remove
+1dotnet nuget remove source &#123;name&#125;
+
+see
+1dotnet nu ...
         
       </div>
-      <a class="more" href="/2018/06/04/test/">查看更多</a>
+      <a class="more" href="/2022/09/21/dotnet/dotnet_setNuget/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2018/06/04/hello-world/">Hello World</a>
+        <a href="/2022/09/21/dotnet/dotnet_publish/">dotnet publish</a>
       </h2>
-      <p class="article-date">June 4, 2018</p>
+      <p class="article-date">September 21, 2022</p>
+      
+        
+  <a href="/tags#dotnet" >
+    <span class="tag-code">dotnet</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          dotnet publish1dotnet publish -c Release -r linux-x64 --self-contained false -o ./bin/publish
+
+-c-c Release-c Debug
+
+
+        
+      </div>
+      <a class="more" href="/2022/09/21/dotnet/dotnet_publish/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2022/09/21/git/git_linuxAutoInputPwd/">linux 下 git 免密</a>
+      </h2>
+      <p class="article-date">September 21, 2022</p>
+      
+        
+  <a href="/tags#git" >
+    <span class="tag-code">git</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          方法一
+cd到~&#x2F;目录下，创建一个文件：touch .git-credentialsvim .git-credentials
+然后输入https:&#x2F;&#x2F;{username}:{password}@git.gitxx.com，比如http://fengjiaheng ...
+        
+      </div>
+      <a class="more" href="/2022/09/21/git/git_linuxAutoInputPwd/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2022/09/19/Create-Hexo/">Create Hexo</a>
+      </h2>
+      <p class="article-date">September 19, 2022</p>
+      
+        
+  <a href="/tags#hexo" >
+    <span class="tag-code">hexo</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          安装
+安装前提: nodejs
+安装 nodejs
+直接下载安装: Nodejs
+
+
+
+
+安装 hexo1npm install -g hexo-cli
+
+初始化项目
+找个文件夹1hexo init
+
+使用 vexo theme
+theme 地址: Vexo
+
+
+Download&#x2F; ...
+        
+      </div>
+      <a class="more" href="/2022/09/19/Create-Hexo/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2022/09/19/hello-world/">Hello World</a>
+      </h2>
+      <p class="article-date">September 19, 2022</p>
       
       <div class="article-summary">
         
           Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer ...
         
       </div>
-      <a class="more" href="/2018/06/04/hello-world/">查看更多</a>
+      <a class="more" href="/2022/09/19/hello-world/">Read more</a>
     </article>
   
 
@@ -177,9 +328,10 @@
 </div>
     <footer class="app-footer">
   <p class="copyright">
-    &copy; 2018 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    &copy; 2022 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
-    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
   </p>
 </footer>
 
@@ -194,19 +346,20 @@
   }
 </script>
 <script>
-  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
     FastClick.attach(document.body);
   })
 </script>
 
 <script>
   var hasLine = 'true';
-  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
     $('figure pre').each(function(i, block) {
       var figure = $(this).parents('figure');
       if (hasLine === 'false') {
         figure.find('.gutter').hide();
       }
+      hljs.configure({useBR: true});
       var lang = figure.attr('class').split(' ')[1] || 'code';
       var codeHtml = $(this).html();
       var codeTag = document.createElement('code');
@@ -220,6 +373,9 @@
 </script>
 <!-- Baidu Tongji -->
 
+
 <script src="/js/script.js"></script>
+
+
   </body>
 </html>
