@@ -10,7 +10,7 @@
   
   <title>
     
-      linux 下 git 免密 | Hexo
+      git 命令小记 | Hexo
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -192,8 +192,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>linux 下 git 免密</h2>
-  <p class="post-date">2022-09-21</p>
+  <h2>git 命令小记</h2>
+  <p class="post-date">2022-12-02</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -201,17 +201,175 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><ol>
-<li>cd到~&#x2F;目录下，创建一个文件：touch .git-credentials<br>vim .git-credentials</li>
-<li>然后输入https:&#x2F;&#x2F;{username}:{password}@git.gitxx.com，比如<a target="_blank" rel="noopener" href="http://fengjiaheng:password@git.gitxx.com/">http://fengjiaheng:password@git.gitxx.com</a></li>
-<li>然后执行：git config –global credential.helper store</li>
-<li>然后使用git config –list或者查看一下~&#x2F;.gitconfig文件，会发现多了一行[credential] helper &#x3D; store</li>
-<li>这时候再用 git 拉取仓库就不需要输入用户名和密码了。<br>注意：第4步必须要做，否则做完4、5步之后也不能免密码拉取成功，需要再次执行第4步骤。</li>
+    <section class="markdown-content"><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol>
+<li><p>git config –global user.name “xxxxxx”		</p>
+<pre><code> 配置全局用户名 
+</code></pre>
+</li>
+<li><p>git config –global user.email “<a href="mailto:&#x78;&#x78;&#120;&#x78;&#x78;&#120;&#64;&#120;&#x78;&#x78;&#46;&#x63;&#111;&#109;">&#x78;&#x78;&#120;&#x78;&#x78;&#120;&#64;&#120;&#x78;&#x78;&#46;&#x63;&#111;&#109;</a>“  </p>
+<pre><code> 配置全局用户邮箱
+</code></pre>
+</li>
+<li><p>git config –global core.editor vim  	</p>
+<pre><code> 配置git 提交信息的编辑器
+</code></pre>
+</li>
+<li><p>以上命令省去 –global </p>
+<pre><code> 可以对单独的项目进行配置
+</code></pre>
+</li>
+<li><p>在git的全局配置（~&#x2F;.gitconfig）中可以对 一些命令起别名 </p>
+</li>
+<li><p>在每个git管理的项目中可以假如 .gitignore 文件用来设置 可以被忽略的文件格式</p>
+</li>
 </ol>
-<h1 id="方法二-粗暴使用型"><a href="#方法二-粗暴使用型" class="headerlink" title="方法二 粗暴使用型"></a>方法二 粗暴使用型</h1><p>Git Clone命令直接使用用户名密码Clone</p>
-<p>git clone <a target="_blank" rel="noopener" href="http://userName:password@链接/">http://userName:password@链接</a><br>修改为 git clone <a target="_blank" rel="noopener" href="https://username:password@链接/">https://username:password@链接</a></p>
-<p>示例：<br>git clone git@<a href="http://112.12.122.22:t-mapi/hotel-tapi.git">http://112.12.122.22:t-mapi/hotel-tapi.git</a><br>修改为<br>git clone ‘<a href="http://username:password@112.12.122.22:t-mapi/hotel-tapi.git’">http://username:password@112.12.122.22:t-mapi/hotel-tapi.git’</a></p>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>（2）如果账号username或者password中有@符号,需要 将@替换为%40<br>（3）如果报错git clone event not found，需要将 git clone 后地址加上引号 ‘’</p>
+<h3 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h3><ol>
+<li><p>git status </p>
+<pre><code> 查看文件状态
+</code></pre>
+</li>
+<li><p>git add <file1> <file2> <file3>  </p>
+<pre><code> 把文件添加到git , 需要添加多个文件时，可以使用 add .或者 add * 来批量添加所有文件
+</code></pre>
+</li>
+<li><p>git commit -m “备注信息” </p>
+<pre><code> git commit -a -m &quot;备注信息&quot; 可以把 已经至少add过一次的所有文件（假如是新文件，就不会被提交）的修改提交
+ 
+ 提交文件，并且加上提交时的备注信息，如果不加-m 会进入编辑器界面编辑备注信息
+</code></pre>
+</li>
+<li><p>git log </p>
+<pre><code> 查看历史提交记录
+ 
+</code></pre>
+</li>
+<li><p>git tag <tagname> -m”备注” &lt;commit值&gt;</p>
+<pre><code> 给固定的记录打上标记
+ 
+</code></pre>
+</li>
+<li><p>git cat-file -p &lt;commit值&gt;</p>
+<pre><code> 查看指定commit中所包含的内容
+ tree 是指本次提交中的文件结构 parent 是本次commit的父节点 blob 是具体的文件的对象
+</code></pre>
+</li>
+</ol>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ol>
+<li><p>git checkout  <file> </p>
+<pre><code> 从历史区中捡出 file 把当前工作区中修改的内容覆盖掉 这样的操作比较危险，误操作时容易把工作区的改动全部删除
+ 
+</code></pre>
+</li>
+<li><p>git stash  </p>
+<pre><code> 把当前工作区的中修改撤销 ，撤销的修改会以 栈 的形式存放 ，如果需要把撤销再复原的话，可以使用 git stash pop 把撤销拿回来; 如果需要彻底清空 stash里的内容可以 使用 git stash clear来清除垃圾区
+</code></pre>
+</li>
+<li><p>git rm <file></p>
+<pre><code> 可以把文件从历史区中删除，所以要想从git管理中删除某一个文件，必须使用 git rm，而不是直接使用rm
+ 
+</code></pre>
+</li>
+<li><p>git reset HEAD <file></p>
+<pre><code> 可以把已经add到暂存区的修改再撤销回工作区vi
+</code></pre>
+</li>
+</ol>
+<h3 id="对比文件差异"><a href="#对比文件差异" class="headerlink" title="对比文件差异"></a>对比文件差异</h3><ol>
+<li>git diff <file></li>
+</ol>
+<h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><ol>
+<li><p>git branch </p>
+<pre><code> 列出当前所有分支
+</code></pre>
+<p> 1.1 git branch –all   &#x2F;&#x2F; 所有的分支</p>
+</li>
+<li><p>git branch &lt;分支名&gt; </p>
+<pre><code> 基于当前分支的最新提交拉取一次分支
+</code></pre>
+</li>
+<li><p>git checkout &lt;分支名&gt; </p>
+<pre><code> 切换到指定的分支上去
+ - 切换远程分支到本地
+ git checkout -b cad_team_a remotes/origin/cad_team_a
+</code></pre>
+</li>
+<li><p>git branch -d &lt;分支名&gt; </p>
+<pre><code> 删除指定的分支 ，如果确定需要删除可以使用 -D 强制删除
+ 
+</code></pre>
+</li>
+<li><p>git checkout -b &lt;分支名&gt;</p>
+<pre><code> 会创建并且切换到该分支	
+ 
+</code></pre>
+</li>
+<li><p>git reset –hard &lt;commit值&gt;</p>
+<pre><code> 可以回退本分支上的某一次 具体的提交
+ 
+</code></pre>
+</li>
+<li><p>git merge &lt;分支名&gt;</p>
+<pre><code> merge是把指定分支合并到当前的分支
+ git merge --no-merged 可以查看当前还有哪些分支与当前分支没有合并的
+ git merge --merge 可以查看已经与当前分支合并过的分支
+ 
+</code></pre>
+</li>
+<li><p>git cherry-pick &lt;commit值&gt;</p>
+<pre><code> 从别的分支上捡出一个commit与当前分支合并
+</code></pre>
+</li>
+<li><p>git rebase</p>
+<pre><code> 重衍（变基）命令
+ 将某个分支的改动直接加入到某一指定分支上冲重新开展，效果是在最终的log里看不到有侧分支的痕迹
+ 1  切换到需要 重衍的 分支  		git checkout someBranch （需要重衍的分支）
+ 2  执行重衍命令           		git rebase baseBranch (重衍基于的分支)
+ 3  切换到基于的分支合并重衍的分支	git checkout baseBranch &gt; git merge someBranch
+</code></pre>
+</li>
+</ol>
+<h3 id="远程操作"><a href="#远程操作" class="headerlink" title="远程操作"></a>远程操作</h3><ol>
+<li><p>git clone </p>
+<pre><code> 克隆远端仓库
+ 
+ 基于ssh的远端地址 ssh://qingyun@192.168.1.233:/Users/qingyun/Desktop/code1512/Code/20160128/TestRemote
+ 基于http/https的远端地址 http(https)://xxx.xxx.com/xxxx.git 
+
+ 加 -o 可以给远端仓库改名，默认是 origin
+</code></pre>
+</li>
+<li><p>git remote</p>
+<pre><code> 列出远端仓库列表
+ 
+ git remote rename remoteName newName  给远端仓库改名
+ git remote show 列出远端仓库列表
+ git remote add &lt;仓库名&gt; &lt;远端地址&gt;	添加新的远端仓库
+ git remote rm &lt;仓库名&gt; 删除指定远端仓库
+</code></pre>
+</li>
+<li><p>git fetch</p>
+<pre><code> 拉取远端仓库内容
+ git fetch &lt;仓库名&gt; 拉取指定远端仓库的内容
+ 
+ fetch只是把远端仓库内容下载到本地，如果需要将内容与本地分支合并 需要
+ git merge &lt;仓库名&gt;/&lt;分支名&gt;
+ 
+</code></pre>
+</li>
+<li><p>git pull &lt;仓库名&gt; &lt;远端分支名&gt;</p>
+<pre><code> 拉取远端分支并且跟本地分支合并 类似 fetch+merge 的组合
+ 
+</code></pre>
+</li>
+<li><p>git push &lt;仓库名&gt; &lt;本地分支名&gt;</p>
+<pre><code> 推送到服务器
+</code></pre>
+</li>
+<li><p>git push &lt;仓库名&gt; :&lt;服务器分支名&gt;</p>
+<pre><code> 删除服务器上的某一分支
+</code></pre>
+</li>
+</ol>
 </section>
     <!-- Tags START -->
     
@@ -230,20 +388,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2022/09/19/hexo/Create-Hexo/">
+      <a class="nav-left" href="/2022/09/21/dotnet/dotnet_setNuget/">
         <span class="nav-arrow">← </span>
         
-          Create Hexo
+          dotnet set nuget
         
       </a>
     
-    
-      <a class="nav-right" href="/2022/09/21/dotnet/dotnet_publish/">
-        
-          dotnet publish
-        
-        <span class="nav-arrow"> →</span>
-      </a>
     
   </div>
 
@@ -295,7 +446,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-nav-text">方法一</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C-%E7%B2%97%E6%9A%B4%E4%BD%BF%E7%94%A8%E5%9E%8B"><span class="toc-nav-text">方法二 粗暴使用型</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-nav-text">注意事项</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-nav-text">配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="toc-nav-text">基础命令</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9"><span class="toc-nav-text">撤销修改</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E6%AF%94%E6%96%87%E4%BB%B6%E5%B7%AE%E5%BC%82"><span class="toc-nav-text">对比文件差异</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C"><span class="toc-nav-text">分支操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"><span class="toc-nav-text">远程操作</span></a></li></ol>
     
   </div>
 </aside>
@@ -305,7 +456,7 @@
 
 <script>
   (function () {
-    var url = 'http://example.com/2022/09/21/git/git_linuxAutoInputPwd/';
+    var url = 'http://example.com/2022/12/02/git/git/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
