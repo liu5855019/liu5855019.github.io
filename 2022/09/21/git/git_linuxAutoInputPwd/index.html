@@ -32,7 +32,7 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>linux 下 git 免密 - daimu's blog</title>
-  <meta name="keywords" content="git,null">
+  <meta name="keywords" content="git, linux,null">
   <meta desc name="description" content="daimu's blog - John Doe - daimu's blog">
   
 <meta property="og:type" content="article">
@@ -43,9 +43,9 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-09-21T03:14:00.000Z">
-<meta property="article:modified_time" content="2022-09-21T03:20:46.370Z">
+<meta property="article:modified_time" content="2022-12-27T03:49:11.888Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="git">
+<meta property="article:tag" content="git, linux">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1708,7 +1708,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671247842172),
+    lastupdate: new Date(1672113696886),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2559,17 +2559,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><ol>
+    <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><ol>
 <li>cd到~&#x2F;目录下，创建一个文件：touch .git-credentials<br>vim .git-credentials</li>
 <li>然后输入https:&#x2F;&#x2F;{username}:{password}@git.gitxx.com，比如<a target="_blank" rel="noopener" href="http://fengjiaheng:password@git.gitxx.com/">http://fengjiaheng:password@git.gitxx.com</a></li>
 <li>然后执行：git config –global credential.helper store</li>
 <li>然后使用git config –list或者查看一下~&#x2F;.gitconfig文件，会发现多了一行[credential] helper &#x3D; store</li>
 <li>这时候再用 git 拉取仓库就不需要输入用户名和密码了。<br>注意：第4步必须要做，否则做完4、5步之后也不能免密码拉取成功，需要再次执行第4步骤。</li>
 </ol>
-<h1 id="方法二-粗暴使用型"><a href="#方法二-粗暴使用型" class="headerlink" title="方法二 粗暴使用型"></a>方法二 粗暴使用型</h1><p>Git Clone命令直接使用用户名密码Clone</p>
+<h3 id="方法二-粗暴使用型"><a href="#方法二-粗暴使用型" class="headerlink" title="方法二 粗暴使用型"></a>方法二 粗暴使用型</h3><p>Git Clone命令直接使用用户名密码Clone</p>
 <p>git clone <a target="_blank" rel="noopener" href="http://userName:password@链接/">http://userName:password@链接</a><br>修改为 git clone <a target="_blank" rel="noopener" href="https://username:password@链接/">https://username:password@链接</a></p>
 <p>示例：<br>git clone git@<a href="http://112.12.122.22:t-mapi/hotel-tapi.git">http://112.12.122.22:t-mapi/hotel-tapi.git</a><br>修改为<br>git clone ‘<a href="http://username:password@112.12.122.22:t-mapi/hotel-tapi.git’">http://username:password@112.12.122.22:t-mapi/hotel-tapi.git’</a></p>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>（2）如果账号username或者password中有@符号,需要 将@替换为%40<br>（3）如果报错git clone event not found，需要将 git clone 后地址加上引号 ‘’</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>（2）如果账号username或者password中有@符号,需要 将@替换为%40<br>（3）如果报错git clone event not found，需要将 git clone 后地址加上引号 ‘’</p>
 
   </div>
   
@@ -2594,10 +2594,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-21T11:20:46+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-27T11:49:11+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 21, 2022</p>
+    <p>更新于：Dec 27, 2022</p>
   </a>
 </div>
 
@@ -2606,8 +2606,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/git/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>git</p></a></div>
-  <span hidden itemprop="keywords">git</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/git-linux/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>git, linux</p></a></div>
+  <span hidden itemprop="keywords">git, linux</span>
 
 
         
@@ -2759,7 +2759,7 @@ remove
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C-%E7%B2%97%E6%9A%B4%E4%BD%BF%E7%94%A8%E5%9E%8B"><span class="toc-text">方法二 粗暴使用型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li></ol>
     </div>
   </section>
 
@@ -3543,7 +3543,7 @@ remove
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.zaiyuan.cc/2022/09/21/git/git_linuxAutoInputPwd/","name":"linux 下 git 免密"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":""},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"linux 下 git 免密","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.zaiyuan.cc/2022/09/21/git/git_linuxAutoInputPwd/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.zaiyuan.cc/2022/09/21/git/git_linuxAutoInputPwd/","wordCount":0,"datePublished":"2022-09-21T03:14:00.000Z","dateModified":"2022-09-21T03:20:46.370Z","keywords":"git","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.zaiyuan.cc/2022/09/21/git/git_linuxAutoInputPwd/","name":"linux 下 git 免密"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":""},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"linux 下 git 免密","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.zaiyuan.cc/2022/09/21/git/git_linuxAutoInputPwd/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.zaiyuan.cc/2022/09/21/git/git_linuxAutoInputPwd/","wordCount":0,"datePublished":"2022-09-21T03:14:00.000Z","dateModified":"2022-12-27T03:49:11.888Z","keywords":"git, linux","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
