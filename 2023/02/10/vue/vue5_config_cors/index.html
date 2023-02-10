@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://blog.zaiyuan.cc/2022/09/19/shell/hexo/create-hexo/"/>
+  <link rel="canonical" href="https://blog.zaiyuan.cc/2023/02/10/vue/vue5_config_cors/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -46,21 +46,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Create Hexo - daimu's blog</title>
-  <meta name="keywords" content="hexo,null">
+  <title>vue5 -- 配置跨域 - daimu's blog</title>
+  <meta name="keywords" content="vue,cors,null">
   <meta desc name="description" content="daimu's blog - daimu - daimu's blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Create Hexo">
-<meta property="og:url" content="https://blog.zaiyuan.cc/2022/09/19/shell/hexo/Create-Hexo/index.html">
+<meta property="og:title" content="vue5 -- 配置跨域">
+<meta property="og:url" content="https://blog.zaiyuan.cc/2023/02/10/vue/vue5_config_cors/index.html">
 <meta property="og:site_name" content="daimu&#39;s blog">
-<meta property="og:description" content="安装 安装前提: nodejs 安装 nodejs 直接下载安装: Nodejs     安装 hexo1npm install -g hexo-cli  初始化项目 找个文件夹1hexo init  使用 vexo theme theme 地址: Vexo   Download&#x2F;Checkout this theme into your project 12345cd your-hex">
+<meta property="og:description" content="1. 概念 同源策略：  是一种约定，web 与 获取的数据同源, 才能被当前web接受&#x2F;运行 它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。   为什么会有不同源:  在前后端分离的模式下，web 服务器 和 资源服务器会分开部署 前后端的域名是不一致的，此时就会发生跨域访问问题   跨域是什么：  浏览器从一个域名的网页去请求另一个域名的">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-09-19T14:34:05.000Z">
-<meta property="article:modified_time" content="2023-01-09T10:07:25.291Z">
+<meta property="article:published_time" content="2023-02-10T10:02:37.000Z">
+<meta property="article:modified_time" content="2023-02-10T10:02:38.423Z">
 <meta property="article:author" content="daimu">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="cors">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2527,7 +2528,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/2022/09/19/shell/hexo/Create-Hexo/">
+  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/2023/02/10/vue/vue5_config_cors/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="daimu's blog">
   </span>
@@ -2548,7 +2549,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Create Hexo
+        vue5 -- 配置跨域
       </h1>
       <div class='new-meta-box'>
         
@@ -2569,10 +2570,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-09-19T22:34:05+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-02-10T18:02:37+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年9月19日</p>
+    <p>发布于：2023年2月10日</p>
   </a>
 </div>
 
@@ -2595,57 +2596,54 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ul>
-<li>安装前提: nodejs<ul>
-<li>安装 nodejs<ul>
-<li>直接下载安装: <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Nodejs</a></li>
+    <h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h3><ul>
+<li><p>同源策略：</p>
+<ul>
+<li>是一种约定，web 与 获取的数据同源, 才能被当前web接受&#x2F;运行</li>
+<li>它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。</li>
+</ul>
+</li>
+<li><p>为什么会有不同源:</p>
+<ul>
+<li>在前后端分离的模式下，web 服务器 和 资源服务器会分开部署</li>
+<li>前后端的域名是不一致的，此时就会发生跨域访问问题</li>
+</ul>
+</li>
+<li><p>跨域是什么：</p>
+<ul>
+<li>浏览器从一个域名的网页去请求另一个域名的资源时，域名、端口、协议任一不同，都是跨域</li>
+<li>即使域名相同, 端口不同 也是跨域的。</li>
 </ul>
 </li>
 </ul>
+<h3 id="2-跨域处理"><a href="#2-跨域处理" class="headerlink" title="2. 跨域处理"></a>2. 跨域处理</h3><ul>
+<li><p>正规情况下, 需要后端配置跨域规则, 在后端把前端的地址端口配置进去即可</p>
 </li>
-<li>安装 hexo<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
+<li><p>请求示例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host: 192.168.52.21:8001</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Accept: */*</span><br><span class="line">Access-Control-Request-Method: GET</span><br><span class="line">Access-Control-Request-Headers: x-requestid</span><br><span class="line">Origin: http://192.168.52.21:8080</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36</span><br><span class="line">Sec-Fetch-Mode: cors</span><br><span class="line">Referer: http://192.168.52.21:8080/</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>返回示例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 204 No Content</span><br><span class="line">Date: Fri, 10 Feb 2023 08:25:38 GMT</span><br><span class="line">Server: Kestrel</span><br><span class="line">Access-Control-Allow-Credentials: true</span><br><span class="line">Access-Control-Allow-Headers: x-requestid</span><br><span class="line">Access-Control-Allow-Methods: GET</span><br><span class="line">Access-Control-Allow-Origin: http://192.168.52.21:8080</span><br><span class="line">Vary: Origin</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h1 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h1><ul>
-<li>找个文件夹<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h1 id="使用-vexo-theme"><a href="#使用-vexo-theme" class="headerlink" title="使用 vexo theme"></a>使用 vexo theme</h1><ul>
-<li>theme 地址: <a target="_blank" rel="noopener" href="https://github.com/yanm1ng/hexo-theme-vexo">Vexo</a></li>
-</ul>
+<h3 id="3-伪跨域"><a href="#3-伪跨域" class="headerlink" title="3. 伪跨域"></a>3. 伪跨域</h3><ul>
+<li><p>但是作为vue前端开发者, 可能主导不了要访问的后端, 开发的时候还必须跨域访问, 然后就有了伪跨域 </p>
+</li>
+<li><p>vue 伪跨域原理</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. vue 可以配置一个代理, 这个代理是跟前端地址同源的</span><br><span class="line">2. 在启动调试的时候, 会同时启动这个代理服务</span><br><span class="line">3. 然后请求后台的时候, 把地址配置成这个代理服务, 请求这个代理服务; </span><br><span class="line">4. 在代理服务中配置真正的后台地址, 代理服务再请求到真正的后台; </span><br><span class="line">5. 后台返回数据后, 代理服务 返回到当前页面;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>vue 伪跨域实现</p>
 <ol>
-<li><p>Download&#x2F;Checkout this theme into your project</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd your-hexo-folder</span><br><span class="line"></span><br><span class="line">git clone https://github.com/yanm1ng/hexo-theme-vexo.git themes/vexo</span><br><span class="line"></span><br><span class="line">cp -R themes/vexo/_source/* source/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Update project <code>_config.yml</code> theme config, look like this</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes: vexo</span><br></pre></td></tr></table></figure>
-
-<p>Here theme’s name must same as the theme folder name.</p>
-</li>
-<li><p>Modify theme <code>themes/vexo/_config.yml</code> with your own info.</p>
-</li>
-</ol>
-<h1 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;title&quot;</span><br></pre></td></tr></table></figure>
-
-<h1 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h1><ul>
-<li><ol>
-<li>测试, 查看效果<blockquote>
-<p>hexo server</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>生成到 public 文件夹<blockquote>
-<p>hexo g</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><ol start="3">
-<li>copy public 里的内容到 github.io 项目, 并提交</li>
+<li>配置代理服务 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="keyword">const</span> &#123; defineConfig &#125; = <span class="built_in">require</span>(<span class="string">&#x27;@vue/cli-service&#x27;</span>)</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">devServer</span>: &#123;</span><br><span class="line">    <span class="attr">proxy</span>: &#123;        <span class="comment">// 配置跨域, 开启一个代理服务</span></span><br><span class="line">      <span class="string">&#x27;/api&#x27;</span>: &#123;     <span class="comment">// 代理服务的地址: /api</span></span><br><span class="line">        <span class="attr">target</span>:<span class="string">&#x27;http://192.168.52.21:8001&#x27;</span>, <span class="comment">// 真正的后台地址</span></span><br><span class="line">        <span class="attr">changOrigin</span>: <span class="literal">true</span>,    <span class="comment">// 同意跨域</span></span><br><span class="line">        <span class="attr">pathRewrite</span>: &#123;        <span class="comment">// 重写url</span></span><br><span class="line">          <span class="string">&#x27;/api&#x27;</span>:<span class="string">&#x27;&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>配置url <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> request = axios.<span class="title function_">create</span>(&#123;</span><br><span class="line">    <span class="attr">baseURL</span>: <span class="string">&#x27;/api&#x27;</span>,    <span class="comment">//指向代理地址</span></span><br><span class="line">    <span class="attr">timeout</span>: <span class="number">5000</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
 </ol>
 </li>
 </ul>
-<h1 id="最后-提交本项目更改"><a href="#最后-提交本项目更改" class="headerlink" title="最后, 提交本项目更改"></a>最后, 提交本项目更改</h1>
+<h3 id="4-重中之重"><a href="#4-重中之重" class="headerlink" title="4. 重中之重"></a>4. 重中之重</h3><ul>
+<li>跨域是后端要配置的</li>
+<li>前端只能是伪跨域</li>
+<li>发布的时候 baseURL 要切换为真正的后台地址</li>
+</ul>
+
   </div>
   
   
@@ -2669,10 +2667,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-09T18:07:25+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-02-10T18:02:38+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年1月9日</p>
+    <p>更新于：2023年2月10日</p>
   </a>
 </div>
 
@@ -2681,8 +2679,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hexo/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>hexo</p></a></div>
-  <span hidden itemprop="keywords">hexo</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/vue/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>vue</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/cors/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>cors</p></a></div>
+  <span hidden itemprop="keywords">vue cors</span>
 
 
         
@@ -2695,7 +2693,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.zaiyuan.cc/2022/09/19/shell/hexo/Create-Hexo/&title=Create Hexo - daimu's blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.zaiyuan.cc/2023/02/10/vue/vue5_config_cors/&title=vue5 -- 配置跨域 - daimu's blog&summary="
           
           >
           
@@ -2707,7 +2705,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.zaiyuan.cc/2022/09/19/shell/hexo/Create-Hexo/&title=Create Hexo - daimu's blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.zaiyuan.cc/2023/02/10/vue/vue5_config_cors/&title=vue5 -- 配置跨域 - daimu's blog&summary="
           
           >
           
@@ -2719,7 +2717,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.zaiyuan.cc/2022/09/19/shell/hexo/Create-Hexo/&title=Create Hexo - daimu's blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.zaiyuan.cc/2023/02/10/vue/vue5_config_cors/&title=vue5 -- 配置跨域 - daimu's blog&summary="
           
           >
           
@@ -2752,17 +2750,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/09/21/shell/git/git_linuxAutoInputPwd/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>linux 下 git 免密</p>
-          <p class='content'>方法一
-cd到~&#x2F;目录下，创建一个文件：touch .git-credentialsvim .git-credentials
-然后输入https:&#x2F;&#x2F;{userna...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/09/19/shell/hexo/hello-world/'>
-          <p class='title'>Hello World<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
+        <a class='next' href='/2023/02/10/vue/vue4_add_axios/'>
+          <p class='title'>vue5 -- add axios<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1. axios
+axios 是用来网络请求的
+
+</p>
         </a>
       
     </div>
@@ -2778,7 +2772,7 @@ cd到~&#x2F;目录下，创建一个文件：touch .git-credentialsvim .git-cred
 
   <article class="post white-box shadow floatable" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/09/19/shell/hexo/Create-Hexo/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/02/10/vue/vue5_config_cors/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2820,7 +2814,7 @@ cd到~&#x2F;目录下，创建一个文件：touch .git-credentialsvim .git-cred
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A6%82%E5%BF%B5"><span class="toc-text">1. 概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B7%A8%E5%9F%9F%E5%A4%84%E7%90%86"><span class="toc-text">2. 跨域处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BC%AA%E8%B7%A8%E5%9F%9F"><span class="toc-text">3. 伪跨域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%87%8D%E4%B8%AD%E4%B9%8B%E9%87%8D"><span class="toc-text">4. 重中之重</span></a></li></ol>
     </div>
   </section>
 
@@ -3390,7 +3384,7 @@ cd到~&#x2F;目录下，创建一个文件：touch .git-credentialsvim .git-cred
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.zaiyuan.cc/2022/09/19/shell/hexo/Create-Hexo/","name":"Create Hexo"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"","author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":""},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Create Hexo","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.zaiyuan.cc/2022/09/19/shell/hexo/Create-Hexo/"},"author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.zaiyuan.cc/2022/09/19/shell/hexo/Create-Hexo/","wordCount":0,"datePublished":"2022-09-19T14:34:05.000Z","dateModified":"2023-01-09T10:07:25.291Z","keywords":"hexo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.zaiyuan.cc/2023/02/10/vue/vue5_config_cors/","name":"vue5 -- 配置跨域"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"","author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":""},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"vue5 -- 配置跨域","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.zaiyuan.cc/2023/02/10/vue/vue5_config_cors/"},"author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.zaiyuan.cc/2023/02/10/vue/vue5_config_cors/","wordCount":0,"datePublished":"2023-02-10T10:02:37.000Z","dateModified":"2023-02-10T10:02:38.423Z","keywords":"vue,cors","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
