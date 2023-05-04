@@ -57,8 +57,8 @@
 <meta property="og:description" content="Joplin 导出, hexo 发布到 github pages 支持图片  Joplin 导出 markdown 后有两个文件夹 在 Joplin 里写markdown文章, 直接拖本地图片到编辑区, joplin 会保存图片到_resources文件夹 对指定文件夹 _post 点右键导出 选择 “markdown+文章前言” _post _resources 将这两个文件夹直接 copy 到">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-05-04T13:49:16.339Z">
-<meta property="article:modified_time" content="2023-05-04T05:42:28.000Z">
+<meta property="article:published_time" content="2023-05-04T14:08:49.185Z">
+<meta property="article:modified_time" content="2023-05-04T06:07:28.000Z">
 <meta property="article:author" content="daimu">
 <meta property="article:tag" content="tools">
 <meta property="article:tag" content="joplin">
@@ -1611,7 +1611,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1683208276423),
+    lastupdate: new Date(1683209360064),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc","category","tagcloud"],
@@ -2328,10 +2328,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-04T13:42:28+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-04T14:07:28+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023-05-04 13:42</p>
+    <p>更新于：2023-05-04 14:07</p>
   </a>
 </div>
 
@@ -2342,7 +2342,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：300 字</p>
+      <p>字数：328 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2387,19 +2387,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>hexo g, 发布, 上传到 github.io</li>
 </ul>
 <h3 id="调试-github-io"><a href="#调试-github-io" class="headerlink" title="调试 github.io"></a>调试 github.io</h3><ul>
-<li>打开 github pages,  发现还是没有图片</li>
-<li>debug 后, 发现还是无法访问_resources</li>
-<li>再次检查后, 发现 <ul>
-<li>github.io &gt; setting &gt; pages &gt; build and deployment &gt; deploy from a branch 此选项会跳过 .  _ 等前缀的文件夹</li>
+<li><p>打开 github pages,  发现还是没有图片</p>
+</li>
+<li><p>debug 后, 发现还是无法访问_resources</p>
+</li>
+<li><p>再次检查后, 发现 </p>
+<ul>
+<li>github.io &gt; setting &gt; pages &gt; build and deployment &gt; deploy from a branch</li>
+<li>此选项使用的是 jekyll 来生成 github pages</li>
+<li>jekyll 默认会跳过 .  _ # 等前缀的文件夹  <a target="_blank" rel="noopener" href="https://docs.github.com/zh/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll">参考</a></li>
+</ul>
+<p>  <img src="/../../../_resources/7a8e769c122d3412a5b37aedb119cb17.png" class="lazyload" data-srcset="/../../../_resources/7a8e769c122d3412a5b37aedb119cb17.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="7a8e769c122d3412a5b37aedb119cb17.png"></p>
+</li>
+<li><p>解决办法: 配置 jekyll <a target="_blank" rel="noopener" href="https://jekyllrb.com/docs/configuration/default/">参考</a></p>
+<ul>
+<li>在 github.io 根目录下创建 _config.yml 文件  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># github.io: _config.yml</span></span><br><span class="line"><span class="attr">include:</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">_resources</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li>只能自己写deploy<ul>
-<li>github.io &gt; setting &gt; pages &gt; build and deployment  选 github actions 创建 workflows:  GitHub Pages Jekyll     直接保存</li>
-<li><img src="/../../../_resources/7a8e769c122d3412a5b37aedb119cb17.png" class="lazyload" data-srcset="/../../../_resources/7a8e769c122d3412a5b37aedb119cb17.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="7a8e769c122d3412a5b37aedb119cb17.png"></li>
-</ul>
+<li><p>此时重新生成,  就会有图片了</p>
 </li>
 </ul>
-
+<h3 id="The-end"><a href="#The-end" class="headerlink" title="The end"></a>The end</h3>
   </div>
   
   
@@ -2423,20 +2431,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-04T21:49:16+08:00">
+          <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-04T22:08:49+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023-05-04 21:49</p>
+    <p>发布于：2023-05-04 22:08</p>
   </a>
 </div>
 
         
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-04T13:42:28+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-04T14:07:28+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023-05-04 13:42</p>
+    <p>更新于：2023-05-04 14:07</p>
   </a>
 </div>
 
@@ -2516,26 +2524,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/other/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/%E5%8D%97%E4%BC%A0%20UNT413a%20s905l3a/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>南传 UNT413a s905l3a</p>
+      
+        <a class='next' href='/other/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/%E5%8D%97%E4%BC%A0%20UNT413a%20s905l3a/'>
+          <p class='title'>南传 UNT413a s905l3a<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>dtc -I dtb -O dts -o meson-g12a-s905l3a-cm311.dts meson-g12a-s905l3a-cm311.dtb
 dtc -I dtb -O dts ...</p>
-        </a>
-      
-      
-        <a class='next' href='/other/tools/note%20-%20Joplin%20%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/'>
-          <p class='title'>note - Joplin 笔记软件<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Joplin 笔记软件
-主要功能&#x2F;特性
-markdown
-
-完美支持 markdown
-
-
-导入导出
-
-可以导出&#x2F;导入markdown
-支持 tags, title, cre...</p>
         </a>
       
     </div>
@@ -2613,7 +2606,7 @@ markdown
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Joplin-%E5%AF%BC%E5%87%BA-hexo-%E5%8F%91%E5%B8%83%E5%88%B0-github-pages"><span class="toc-number">1.</span> <span class="toc-text">Joplin 导出, hexo 发布到 github pages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Joplin-%E5%AF%BC%E5%87%BA-markdown-%E5%90%8E%E6%9C%89%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.1.</span> <span class="toc-text">Joplin 导出 markdown 后有两个文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95-hexo"><span class="toc-number">1.2.</span> <span class="toc-text">调试 hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95-github-io"><span class="toc-number">1.3.</span> <span class="toc-text">调试 github.io</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Joplin-%E5%AF%BC%E5%87%BA-hexo-%E5%8F%91%E5%B8%83%E5%88%B0-github-pages"><span class="toc-number">1.</span> <span class="toc-text">Joplin 导出, hexo 发布到 github pages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Joplin-%E5%AF%BC%E5%87%BA-markdown-%E5%90%8E%E6%9C%89%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.1.</span> <span class="toc-text">Joplin 导出 markdown 后有两个文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95-hexo"><span class="toc-number">1.2.</span> <span class="toc-text">调试 hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95-github-io"><span class="toc-number">1.3.</span> <span class="toc-text">调试 github.io</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-end"><span class="toc-number">1.4.</span> <span class="toc-text">The end</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3197,7 +3190,7 @@ markdown
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3426,7 +3419,7 @@ markdown
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":"daimu's blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.zaiyuan.cc/other/tools/Joplin - github pages/","name":"Joplin - github pages"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"daimu's blog","author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":"daimu's blog"},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Joplin - github pages","description":"daimu's blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.zaiyuan.cc/other/tools/Joplin%20-%20github%20pages/"},"author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.zaiyuan.cc/other/tools/Joplin%20-%20github%20pages/","wordCount":0,"datePublished":"2023-05-04T13:49:16.339Z","dateModified":"2023-05-04T05:42:28.000Z","keywords":"tools,joplin","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":"daimu's blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.zaiyuan.cc/other/tools/Joplin - github pages/","name":"Joplin - github pages"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"daimu's blog","author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":"daimu's blog"},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Joplin - github pages","description":"daimu's blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.zaiyuan.cc/other/tools/Joplin%20-%20github%20pages/"},"author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.zaiyuan.cc/other/tools/Joplin%20-%20github%20pages/","wordCount":0,"datePublished":"2023-05-04T14:08:49.185Z","dateModified":"2023-05-04T06:07:28.000Z","keywords":"tools,joplin","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
