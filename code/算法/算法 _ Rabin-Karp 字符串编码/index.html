@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.7">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://blog.zaiyuan.cc/"/>
+  
+  <link rel="canonical" href="https://blog.zaiyuan.cc/code/算法/算法 _ rabin-karp 字符串编码/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -46,17 +46,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>daimu's blog</title>
-  <meta name="keywords" content="">
+  <title>算法 : Rabin-Karp 字符串编码 - daimu's blog</title>
+  <meta name="keywords" content="null">
   <meta desc name="description" content="daimu's blog - daimu - daimu's blog">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="daimu&#39;s blog">
-<meta property="og:url" content="https://blog.zaiyuan.cc/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法 : Rabin-Karp 字符串编码">
+<meta property="og:url" content="https://blog.zaiyuan.cc/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/index.html">
 <meta property="og:site_name" content="daimu&#39;s blog">
-<meta property="og:description" content="daimu&#39;s blog">
+<meta property="og:description" content="先看一个题目 「快乐前缀」是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。给你一个字符串 s，请你返回它的 __最长快乐前缀__。如果不存在满足题意的前缀，则返回一个空字符串。  示例 1：输入：s &#x3D; “level”输出：”l”解释：不包括 s 自己，一共有 4 个前缀（”l”, “le”, “lev”, “leve”）和 4 个后缀（”l”, “el”, “ve">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-04-28T09:23:24.454Z">
+<meta property="article:modified_time" content="2023-04-28T00:49:12.000Z">
 <meta property="article:author" content="daimu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2031,7 +2033,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur "  >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2266,7 +2268,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  blank' style="display: ;">
+      <div id="none" class='cover-wrapper post blank' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2281,99 +2283,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/算法/算法 _ Rabin-Karp 字符串编码/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="daimu's blog">
@@ -2383,726 +2293,268 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="daimu's blog">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         算法 : Rabin-Karp 字符串编码
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        先看一个题目
-「快乐前缀」是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。给你一个字符串 s，请你返回它的 __最长快乐前缀__。如果不存在满足题意的前缀，则返回一个空字符串。
-
-示例 1：输入：s &#x3D; “level”输出：”l”解释：不包括 s 自己，一共有 4 个前缀（”l”, “le”, “lev”, “leve”）和 4 个后缀（”l”, “el”, ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      </h1>
+      <div class='new-meta-box'>
         
           
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' target="_blank" href="https://github.com/liu5855019" rel="nofollow noopener">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">DaiMu</p>
+  </a>
+</div>
+
+          
         
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
+          
+            
+
+          
         
+          
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-28T08:49:12+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023-04-28 08:49</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1.6k 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：6 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h3 id="先看一个题目"><a href="#先看一个题目" class="headerlink" title="先看一个题目"></a>先看一个题目</h3><blockquote>
+<p>「快乐前缀」是在原字符串中既是 <strong>非空</strong> <code>前缀</code>也是<code>后缀</code>（不包括原字符串自身）的字符串。<br>给你一个字符串 <code>s</code>，请你返回它的 __最长快乐前缀__。<br>如果不存在满足题意的前缀，则返回一个空字符串。</p>
+<ul>
+<li><p>示例 1：<br>输入：s &#x3D; “level”<br>输出：”l”<br>解释：不包括 s 自己，一共有 4 个前缀（”l”, “le”, “lev”, “leve”）和 4 个后缀（”l”, “el”, “vel”, “evel”）。最长的既是前缀也是后缀的字符串是 “l” 。</p>
+</li>
+<li><p>示例 2：<br>输入：s &#x3D; “ababab”<br>输出：”abab”<br>解释：”abab” 是最长的既是前缀也是后缀的字符串。题目允许前后缀在原字符串中重叠。</p>
+</li>
+<li><p>提示：<br>1 &lt;&#x3D; s.length &lt;&#x3D; 10^5<br>s 只含有小写英文字母</p>
+</li>
+</ul>
+</blockquote>
+<p>看完这个题后 , 觉得挺简单的, 为啥给了难度:<strong>困难</strong> 呢</p>
+<h4 id="分析一下"><a href="#分析一下" class="headerlink" title="分析一下 :"></a>分析一下 :</h4><blockquote>
+<p>从字符串长度-1开始取前缀和后缀,<br>判断是否相等,<br>然后不相等的话长度再-1,再次取值比较<br>当前缀与后缀相同的时候完成</p>
+</blockquote>
+<p>例如 s &#x3D; “ababab”;<br>可以写个循环<br>step 1: pre &#x3D; “ababa”;  suf &#x3D; “babab”;   不相等, next<br>step 2: pre &#x3D; “abab”; suf &#x3D; “abab”  相等 , 找到答案 , so easy</p>
+<p>用代码实现:</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">longestPrefix</span>(<span class="keyword">_</span> <span class="params">s</span>: <span class="type">String</span>) -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> s.count <span class="operator">&lt;=</span> <span class="number">1</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span><span class="operator">...</span>s.count<span class="operator">-</span><span class="number">2</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> pre <span class="operator">=</span> s.prefix(s.count<span class="operator">-</span><span class="number">1</span><span class="operator">-</span>i);</span><br><span class="line">            <span class="keyword">let</span> suf <span class="operator">=</span> s.suffix(s.count<span class="operator">-</span><span class="number">1</span><span class="operator">-</span>i);</span><br><span class="line">            <span class="keyword">if</span> pre <span class="operator">==</span> suf &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="type">String</span>(pre);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>多么的完美, 直接提交 , 结果不出意料的 <strong>超时!</strong></p>
+<p>分析一下,感觉逻辑完美, 为什么会超时呢</p>
+<blockquote>
+<p>据我的分析 pre &#x3D;&#x3D; suf 这一句当字符串很长的时候,耗时严重,<br>当判断两个字符串是否相等的时候, 会把__两个字符串每一位每一位的比较__,<br>当发现有某一位不一样的时候, 就说明字符串不相同, 所以耗时很严重</p>
+</blockquote>
+<p>##怎么解决呢, 请出今天的主角: <strong>Rabin-Karp 字符串编码</strong></p>
+<h3 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识:"></a>背景知识:</h3><p>Rabin-Karp 字符串编码是一种将字符串映射成整数的编码方式，可以看成是一种哈希算法。具体地，假设字符串包含的字符种类不超过 <code>∣Σ∣</code>（其中 Σ 表示字符集），那么我们选一个大于等于 <code>∣Σ∣</code> 的整数 <code>base</code>，就可以将字符串看成 <code>base进制</code> 的整数，将其转换成十进制数后，就得到了字符串对应的编码。</p>
+<p>例如: 给定字符串 s &#x3D; “abca”，其包含的字符种类为 3（即 abc三种）。我们取 base &#x3D; 9，将字符串 s 看成九进制数 <strong>(0120)<sub>9</sub></strong> ，转换为十进制为 90，也就是说字符串 <code>abca</code> 的编码为 <code>90</code>。</p>
+<p>这样做的好处是什么？我们可以发现一个结论：</p>
+<blockquote>
+<p>两个字符串 s1 和 s2 相等，当且仅当它们的长度相等且编码值相等。</p>
+</blockquote>
+<p>只考虑小写的情况下, 小写字母26个, 定义&gt;&#x3D;26进制的编码就可以了.<br>例如 “abcdef” &#x3D; (012345)<sub>26</sub></p>
+<p>但是聪明的同学会发现个问题:当字符串长度变长的时候, 这个编码值会非常大, 这样可能就无法用一般语言中的整数类型（例如 int，long long 等）存储编码值了。对此，一般的解决方法是将编码值对一个数 <code>mod</code> 进行取模，使得其保持在整数类型的范围之内。</p>
+<p>但这样就带来了一个问题，两个不相同但长度相等的字符串在取模前会有不同的编码值，在取模后的编码值就有可能相同了。换句话说，我们的编码方式不是单射，这种哈希算法会产生碰撞。然而我们并不需要过分担心这个问题：<br>只要我们将模数设置得很大，并且多选择一些模数，Rabin-Karp 字符串编码产生哈希碰撞的概率就微乎其微。一般来说，对于算法题而言，我们只需要选择一个模数即可，并且它最好是一个__质数__，例如 <code>10^9+7</code>。如有需要，还可以选择第二个模数 <code>10^9+9</code> 。对于前文提到的 __base，一般也选择一个质数__，例如本题中 ∣Σ∣&#x3D;26（即所有小写英文字母），我们可以选择 base&#x3D;31 (&gt;&#x3D; 26的质数)。</p>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>对于这道题而言:<br>设定:</p>
+<ul>
+<li><p>base &#x3D; 31;    </p>
+</li>
+<li><p>mod &#x3D; 1000000007;     &#x2F;&#x2F; 10^9+7</p>
+</li>
+<li><p>我们从小到大枚举前缀的长度 <code>i</code>。然后计算 <code>i</code> 对应的<code>前缀编码值</code>和<code>后缀编码值</code>。如果这两个编码值相等，我们就可以判定该<code>前缀</code>和后<code>缀相</code>等。</p>
+</li>
+<li><p>对于前缀而言，每在字符串最后多出一个新的字符，就相当于原编码值乘以 base 再加上新的字符的编码值；</p>
+<blockquote>
+<p>例如<code>bcd</code>,<br>b &#x3D; (1) <sub>31</sub> &#x3D; b;<br>bc &#x3D; (12)<sub>31</sub> &#x3D; (1 * 31 + 2)<sub>10</sub> &#x3D; b * 31 + c<br>bcd &#x3D; (123)<sub>31</sub> &#x3D; (1 * 31 * 31 + 2 * 31 + 3) &#x3D; (b * 31 * 31 + c * 31 + d) &#x3D; (b * 31 + c) * 31 + d &#x3D; bc*31+d</p>
+</blockquote>
+</li>
+<li><p>对于后缀而言，每在字符串最前多出一个新的字符，就相当于原编码值加上新的字符的编码值乘以 base 的 i-1 次幂。</p>
+<blockquote>
+<p>例如<code>bcd</code>,<br>d &#x3D; (3) <sub>31</sub> &#x3D; d;<br>cd &#x3D; (23)<sub>31</sub> &#x3D; (2 * 31 + 3)<sub>10</sub> &#x3D; c * 31 + d<br>bcd &#x3D; (123)<sub>31</sub> &#x3D; (1 * 31 * 31 + 2 * 31 + 3) &#x3D; (b * 31 * 31 + c * 31 + d) &#x3D;  b * 31 * 31 + cd</p>
+</blockquote>
+</li>
+</ul>
+<p>到此就到了最重要的写代码环节了:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    </span><br><span class="line">    func longestPrefix(_ s: String) -&gt; String &#123;</span><br><span class="line">        </span><br><span class="line">        let base = 31; // 大于取值范围的质数 , 代表 31 进制</span><br><span class="line">        let mod = 1000000007;</span><br><span class="line">        let n = s.count;</span><br><span class="line">        let s = s.cString(using: .utf8) ?? [];</span><br><span class="line">        let a = 97;</span><br><span class="line">        </span><br><span class="line">        var preValue = 0;   // 前缀值</span><br><span class="line">        var sufValue = 0;   // 后缀值</span><br><span class="line">        var mul = 1;        // mul = (base)的 n-1 次方</span><br><span class="line">        var happy = -1;</span><br><span class="line">        </span><br><span class="line">        for i in 0..&lt;n-1 &#123;</span><br><span class="line">            preValue = (preValue * base + Int(s[i])-a)%mod;</span><br><span class="line">            sufValue = (sufValue + (Int(s[n-i-1])-a) * mul)%mod;</span><br><span class="line">            </span><br><span class="line">            if preValue == sufValue &#123;</span><br><span class="line">                happy = i;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            // 每计算一次  mul * base;  mul = base ^ i</span><br><span class="line">            mul = mul * base % mod;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (happy &lt; 0) &#123;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return String(String.init(cString: s).prefix(happy+1));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同样是循环比较每个子串是否相等, 这样的效率会高很多……</p>
+<h1 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h1><p>这是我学习LeetCode上的知识的一个总结 , 并非原版照抄 , 原版十分生硬, 看了好久才看明白…<br>赋原文链接: <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-happy-prefix/solution/zui-chang-kuai-le-qian-zhui-by-leetcode-solution/">LeetCode原文</a></p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023-04-28 17:23</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/算法/KMP 算法小记/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/%E7%AE%97%E6%B3%95/KMP%20%E7%AE%97%E6%B3%95%E5%B0%8F%E8%AE%B0/"  itemprop="url">
-        KMP 算法小记
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-28T08:49:12+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023-04-28 08:49</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        KMP 算法 主要是用来从一个主串s中查找子串p的位置
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.zaiyuan.cc/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/&title=算法 : Rabin-Karp 字符串编码 - daimu's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.zaiyuan.cc/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/&title=算法 : Rabin-Karp 字符串编码 - daimu's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.zaiyuan.cc/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/&title=算法 : Rabin-Karp 字符串编码 - daimu's blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/code/%E7%AE%97%E6%B3%95/KMP%20%E7%AE%97%E6%B3%95%E5%B0%8F%E8%AE%B0/'>
+          <p class='title'>KMP 算法小记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>KMP 算法 主要是用来从一个主串s中查找子串p的位置
 要从 s 中找 p 首先想到的就是暴力搜索暴力搜索示例:s &#x3D; “abcdabce”p &#x3D; “bce”
 
-step 1: 12abcdabcebce
-a &#x3D;&#x3D; b ? 不相等, 则next 
-setp 2:  12abcdabce bce
-b&#x3D;&#x3D;b ? c&#x3D;&#x3D...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/%E7%AE%97%E6%B3%95/KMP%20%E7%AE%97%E6%B3%95%E5%B0%8F%E8%AE%B0/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+step 1...</p>
+        </a>
       
     </div>
   
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/iOS/代码 与 _遗传学_ _进化论_/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/iOS/%E4%BB%A3%E7%A0%81%20%E4%B8%8E%20_%E9%81%97%E4%BC%A0%E5%AD%A6_%20_%E8%BF%9B%E5%8C%96%E8%AE%BA_/"  itemprop="url">
-        代码 与 "遗传学" "进化论"
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        前言前几天我看了一篇文章, 讲的就是这个, 深有感触, 于是自己用代码撸了一遍
-先讲故事 (故事是根据之前的文章写的)
-
-有一块沙滩, 上面住着很多的贝壳 , 贝壳的壳上有着各种的图案. 有一天村民发现了这里, 开始捡贝壳回家…, 贝壳跟村民回家后的待遇大伙们都懂…
-但是村民不是什么贝壳都捡, 村民家里有信仰的图腾, 当发现贝壳的图案与图腾比较像的时候就跳过, 村民会留下一部分让贝壳们繁衍生...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/iOS/%E4%BB%A3%E7%A0%81%20%E4%B8%8E%20_%E9%81%97%E4%BC%A0%E5%AD%A6_%20_%E8%BF%9B%E5%8C%96%E8%AE%BA_/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
   
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/iOS/用chrome浏览器 下载 fir.im 的 ipa - 简书/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
   
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/iOS/%E7%94%A8chrome%E6%B5%8F%E8%A7%88%E5%99%A8%20%E4%B8%8B%E8%BD%BD%20fir.im%20%E7%9A%84%20ipa%20-%20%E7%AE%80%E4%B9%A6/"  itemprop="url">
-        用chrome浏览器 下载 fir.im 的 ipa - 简书
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-
-在浏览器上输入下载地址
 
 
 
-进入调试模式
-
-
-
-用调试模式里的手机模式重新加载, 选iPhone机型, 如图所示
-
-
-
-点击下载安装,  console 会弹出一条报错信息
-
-
-
-点击报错信息, 浏览器会弹出新页面打开
-
-
-
-复制地址的后半段 https 以后的, 如图
-
-
-
-使用地址解析解析出 install 下载地址, 打开下载地址
-
-
-
-下载出 install 文件后, 用 文本...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/iOS/%E7%94%A8chrome%E6%B5%8F%E8%A7%88%E5%99%A8%20%E4%B8%8B%E8%BD%BD%20fir.im%20%E7%9A%84%20ipa%20-%20%E7%AE%80%E4%B9%A6/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/vue/vue5 -- 配置跨域/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/vue/vue5%20--%20%E9%85%8D%E7%BD%AE%E8%B7%A8%E5%9F%9F/"  itemprop="url">
-        vue5 -- 配置跨域
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. 概念
-同源策略：
-
-是一种约定，web 与 获取的数据同源, 才能被当前web接受&#x2F;运行
-它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。
-
-
-为什么会有不同源:
-
-在前后端分离的模式下，web 服务器 和 资源服务器会分开部署
-前后端的域名是不一致的，此时就会发生跨域访问问题
-
-
-跨域是什么：
-
-浏览器从一个域名的网页去请求另一个...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/vue/vue5%20--%20%E9%85%8D%E7%BD%AE%E8%B7%A8%E5%9F%9F/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/vue/vue4 -- add axios/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/vue/vue4%20--%20add%20axios/"  itemprop="url">
-        vue4 -- add axios
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. axios
-axios 是用来网络请求的
-
-2. 安装1npm install --save axios
-
-3. 使用axios &#x2F; 封装
-request.ts1234567891011121314151617181920212223242526272829303132333435363738// request.ts// 导入import axios  from &quot...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/vue/vue4%20--%20add%20axios/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/vue/vue3 -- add add sass/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/vue/vue3%20--%20add%20add%20sass/"  itemprop="url">
-        vue3 -- add add sass
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. installnpm 安装
-1npm i node-sass sass-loader -D
-
-2. 此处安装可能出问题, 用下面方法可能能解决
-管理员身份运行 powershell1npm install --global --producttion windows-build-tools
-
-3. use1234567891011121314151617181920&lt;templa...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/vue/vue3%20--%20add%20add%20sass/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/vue/vue2 -- add element ui _ plus/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/vue/vue2%20--%20add%20element%20ui%20_%20plus/"  itemprop="url">
-        vue2 -- add element ui / plus
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. installnpm 安装
-1npm i element-ui -S
-
-2. 完整引入1234567891011121314import Vue from &#x27;vue&#x27;import App from &#x27;./App.vue&#x27;import ElementUI from &#x27;element-ui&#x27;import &#x27;element...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/vue/vue2%20--%20add%20element%20ui%20_%20plus/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/vue/vue1 -- vue cli create project/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/vue/vue1%20--%20vue%20cli%20create%20project/"  itemprop="url">
-        vue1 -- vue cli create project
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. install123456789101112#  初始化项目依赖文件npm init -y # 安装脚手架cnpm i -D @vue/cli# 查看vuecli版本npx vue -V# 创建项目 貌似只能小写npx vue create project-one
-
-
-安装 cnpm
-npm install -g cnpm –registry&#x3D;https://registry...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/vue/vue1%20--%20vue%20cli%20create%20project/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/sql/sql -- cursor/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/sql/sql%20--%20cursor/"  itemprop="url">
-        sql -- cursor
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        open_cursor
-查看所有游标
-1SELECT * FROM v$open_cursor ORDER BY LAST_SQL_ACTIVE_TIME DESC 
-
-查看游标 sql_text 执行次数
-123SELECT SQL_TEXT, COUNT(SQL_TEXT) times FROM  v$open_cursor  GROUP BY SQL_TEXTORDER BY time...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/sql/sql%20--%20cursor/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 4
-        </p>
-        
-          <a class="next" rel="next" href="/page/2/">
-            <section class="post next white-box shadow floatable">
-              &nbsp;下一页&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
 
 
 </div>
@@ -3113,56 +2565,6 @@ npm install -g cnpm –registry&#x3D;https://registry...
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://avatars.githubusercontent.com/u/16952427?s=400&u=bbc39c00ef4e93bcf352eb509c3595dbbb4c4c89&v=4'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>DaiMu</h2>
-        
-        
-          <p>coder</p>
-
-        
-        
-          <p><span id="jinrishici-sentence">daimu's blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/258141764@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/liu5855019/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
     
   
 
@@ -3197,64 +2599,41 @@ npm install -g cnpm –registry&#x3D;https://registry...
     
   
 
-  
+
+<div class="widget-sticky pjax">
 
   
-    
-    
-      
-<section class="widget desktop pjax">
   
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
   <header>
     
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>34 篇</div>
-        </div>
-      
-
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>10.3k 字</div>
-        </div>
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2023-05-04 日</div>
-        </div>
-      
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E7%9C%8B%E4%B8%80%E4%B8%AA%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">先看一个题目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E4%B8%80%E4%B8%8B"><span class="toc-number">1.1.</span> <span class="toc-text">分析一下 :</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86"><span class="toc-number">2.</span> <span class="toc-text">背景知识:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">算法</span></a></li></ol>
     </div>
-  </div>
-</section>
+  </section>
 
-    
   
-
-
-<div class="widget-sticky pjax">
 
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3285,7 +2664,7 @@ npm install -g cnpm –registry&#x3D;https://registry...
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3294,14 +2673,14 @@ npm install -g cnpm –registry&#x3D;https://registry...
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4050,7 +3429,7 @@ npm install -g cnpm –registry&#x3D;https://registry...
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":"daimu's blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"daimu's blog","author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":"daimu's blog"},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"daimu's blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":"daimu's blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.zaiyuan.cc/code/算法/算法 _ Rabin-Karp 字符串编码/","name":"算法 : Rabin-Karp 字符串编码"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"daimu's blog","author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":"daimu's blog"},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"算法 : Rabin-Karp 字符串编码","description":"daimu's blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.zaiyuan.cc/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/"},"author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.zaiyuan.cc/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/","wordCount":0,"datePublished":"2023-04-28T09:23:24.454Z","dateModified":"2023-04-28T00:49:12.000Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

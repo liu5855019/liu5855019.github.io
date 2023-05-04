@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.7">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://blog.zaiyuan.cc/"/>
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://blog.zaiyuan.cc/archives/page/4/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -46,13 +46,13 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>daimu's blog</title>
-  <meta name="keywords" content="">
+  <title>归档 - daimu's blog</title>
+  <meta name="keywords" content="null">
   <meta desc name="description" content="daimu's blog - daimu - daimu's blog">
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="daimu&#39;s blog">
-<meta property="og:url" content="https://blog.zaiyuan.cc/index.html">
+<meta property="og:url" content="https://blog.zaiyuan.cc/archives/page/4/index.html">
 <meta property="og:site_name" content="daimu&#39;s blog">
 <meta property="og:description" content="daimu&#39;s blog">
 <meta property="og:locale" content="zh_CN">
@@ -2281,830 +2281,559 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/算法/算法 _ Rabin-Karp 字符串编码/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/"  itemprop="url">
-        算法 : Rabin-Karp 字符串编码
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        先看一个题目
-「快乐前缀」是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串。给你一个字符串 s，请你返回它的 __最长快乐前缀__。如果不存在满足题意的前缀，则返回一个空字符串。
-
-示例 1：输入：s &#x3D; “level”输出：”l”解释：不包括 s 自己，一共有 4 个前缀（”l”, “le”, “lev”, “leve”）和 4 个后缀（”l”, “el”, ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/算法/KMP 算法小记/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/%E7%AE%97%E6%B3%95/KMP%20%E7%AE%97%E6%B3%95%E5%B0%8F%E8%AE%B0/"  itemprop="url">
-        KMP 算法小记
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        KMP 算法 主要是用来从一个主串s中查找子串p的位置
-要从 s 中找 p 首先想到的就是暴力搜索暴力搜索示例:s &#x3D; “abcdabce”p &#x3D; “bce”
-
-step 1: 12abcdabcebce
-a &#x3D;&#x3D; b ? 不相等, 则next 
-setp 2:  12abcdabce bce
-b&#x3D;&#x3D;b ? c&#x3D;&#x3D...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/%E7%AE%97%E6%B3%95/KMP%20%E7%AE%97%E6%B3%95%E5%B0%8F%E8%AE%B0/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/iOS/代码 与 _遗传学_ _进化论_/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/iOS/%E4%BB%A3%E7%A0%81%20%E4%B8%8E%20_%E9%81%97%E4%BC%A0%E5%AD%A6_%20_%E8%BF%9B%E5%8C%96%E8%AE%BA_/"  itemprop="url">
-        代码 与 "遗传学" "进化论"
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        前言前几天我看了一篇文章, 讲的就是这个, 深有感触, 于是自己用代码撸了一遍
-先讲故事 (故事是根据之前的文章写的)
-
-有一块沙滩, 上面住着很多的贝壳 , 贝壳的壳上有着各种的图案. 有一天村民发现了这里, 开始捡贝壳回家…, 贝壳跟村民回家后的待遇大伙们都懂…
-但是村民不是什么贝壳都捡, 村民家里有信仰的图腾, 当发现贝壳的图案与图腾比较像的时候就跳过, 村民会留下一部分让贝壳们繁衍生...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/iOS/%E4%BB%A3%E7%A0%81%20%E4%B8%8E%20_%E9%81%97%E4%BC%A0%E5%AD%A6_%20_%E8%BF%9B%E5%8C%96%E8%AE%BA_/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/iOS/用chrome浏览器 下载 fir.im 的 ipa - 简书/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/iOS/%E7%94%A8chrome%E6%B5%8F%E8%A7%88%E5%99%A8%20%E4%B8%8B%E8%BD%BD%20fir.im%20%E7%9A%84%20ipa%20-%20%E7%AE%80%E4%B9%A6/"  itemprop="url">
-        用chrome浏览器 下载 fir.im 的 ipa - 简书
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-
-在浏览器上输入下载地址
-
-
-
-进入调试模式
-
-
-
-用调试模式里的手机模式重新加载, 选iPhone机型, 如图所示
-
-
-
-点击下载安装,  console 会弹出一条报错信息
-
-
-
-点击报错信息, 浏览器会弹出新页面打开
-
-
-
-复制地址的后半段 https 以后的, 如图
-
-
-
-使用地址解析解析出 install 下载地址, 打开下载地址
-
-
-
-下载出 install 文件后, 用 文本...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/iOS/%E7%94%A8chrome%E6%B5%8F%E8%A7%88%E5%99%A8%20%E4%B8%8B%E8%BD%BD%20fir.im%20%E7%9A%84%20ipa%20-%20%E7%AE%80%E4%B9%A6/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/vue/vue5 -- 配置跨域/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/vue/vue5%20--%20%E9%85%8D%E7%BD%AE%E8%B7%A8%E5%9F%9F/"  itemprop="url">
-        vue5 -- 配置跨域
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. 概念
-同源策略：
-
-是一种约定，web 与 获取的数据同源, 才能被当前web接受&#x2F;运行
-它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，则浏览器的正常功能可能都会受到影响。
-
-
-为什么会有不同源:
-
-在前后端分离的模式下，web 服务器 和 资源服务器会分开部署
-前后端的域名是不一致的，此时就会发生跨域访问问题
-
-
-跨域是什么：
-
-浏览器从一个域名的网页去请求另一个...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/vue/vue5%20--%20%E9%85%8D%E7%BD%AE%E8%B7%A8%E5%9F%9F/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/vue/vue4 -- add axios/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/vue/vue4%20--%20add%20axios/"  itemprop="url">
-        vue4 -- add axios
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. axios
-axios 是用来网络请求的
-
-2. 安装1npm install --save axios
-
-3. 使用axios &#x2F; 封装
-request.ts1234567891011121314151617181920212223242526272829303132333435363738// request.ts// 导入import axios  from &quot...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/vue/vue4%20--%20add%20axios/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/vue/vue3 -- add add sass/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/vue/vue3%20--%20add%20add%20sass/"  itemprop="url">
-        vue3 -- add add sass
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. installnpm 安装
-1npm i node-sass sass-loader -D
-
-2. 此处安装可能出问题, 用下面方法可能能解决
-管理员身份运行 powershell1npm install --global --producttion windows-build-tools
-
-3. use1234567891011121314151617181920&lt;templa...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/vue/vue3%20--%20add%20add%20sass/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/vue/vue2 -- add element ui _ plus/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/vue/vue2%20--%20add%20element%20ui%20_%20plus/"  itemprop="url">
-        vue2 -- add element ui / plus
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. installnpm 安装
-1npm i element-ui -S
-
-2. 完整引入1234567891011121314import Vue from &#x27;vue&#x27;import App from &#x27;./App.vue&#x27;import ElementUI from &#x27;element-ui&#x27;import &#x27;element...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/vue/vue2%20--%20add%20element%20ui%20_%20plus/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/vue/vue1 -- vue cli create project/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/vue/vue1%20--%20vue%20cli%20create%20project/"  itemprop="url">
-        vue1 -- vue cli create project
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. install123456789101112#  初始化项目依赖文件npm init -y # 安装脚手架cnpm i -D @vue/cli# 查看vuecli版本npx vue -V# 创建项目 貌似只能小写npx vue create project-one
-
-
-安装 cnpm
-npm install -g cnpm –registry&#x3D;https://registry...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/vue/vue1%20--%20vue%20cli%20create%20project/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/sql/sql -- cursor/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="daimu's blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="daimu's blog">
-    <meta itemprop="description" content="daimu's blog">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/sql/sql%20--%20cursor/"  itemprop="url">
-        sql -- cursor
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        open_cursor
-查看所有游标
-1SELECT * FROM v$open_cursor ORDER BY LAST_SQL_ACTIVE_TIME DESC 
-
-查看游标 sql_text 执行次数
-123SELECT SQL_TEXT, COUNT(SQL_TEXT) times FROM  v$open_cursor  GROUP BY SQL_TEXTORDER BY time...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="DaiMu">
-            <meta itemprop="url" content="https://github.com/liu5855019">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-04-28T17:23:24+08:00">2023-04-28</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/code/sql/sql%20--%20cursor/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 4
-        </p>
-        
-          <a class="next" rel="next" href="/page/2/">
-            <section class="post next white-box shadow floatable">
-              &nbsp;下一页&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
-
-
+	
+	  <article id="arc" class="post article white-box reveal shadow floatable">
+			
+			
+				
+				
+					
+						
+						<h2>2023</h2>
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%20_%20Rabin-Karp%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/">
+									<time>04-28</time>
+									
+										算法 : Rabin-Karp 字符串编码
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/%E7%AE%97%E6%B3%95/KMP%20%E7%AE%97%E6%B3%95%E5%B0%8F%E8%AE%B0/">
+									<time>04-28</time>
+									
+										KMP 算法小记
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/iOS/%E4%BB%A3%E7%A0%81%20%E4%B8%8E%20_%E9%81%97%E4%BC%A0%E5%AD%A6_%20_%E8%BF%9B%E5%8C%96%E8%AE%BA_/">
+									<time>04-28</time>
+									
+										代码 与 "遗传学" "进化论"
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/iOS/%E7%94%A8chrome%E6%B5%8F%E8%A7%88%E5%99%A8%20%E4%B8%8B%E8%BD%BD%20fir.im%20%E7%9A%84%20ipa%20-%20%E7%AE%80%E4%B9%A6/">
+									<time>04-28</time>
+									
+										用chrome浏览器 下载 fir.im 的 ipa - 简书
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/vue/vue5%20--%20%E9%85%8D%E7%BD%AE%E8%B7%A8%E5%9F%9F/">
+									<time>04-28</time>
+									
+										vue5 -- 配置跨域
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/vue/vue4%20--%20add%20axios/">
+									<time>04-28</time>
+									
+										vue4 -- add axios
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/vue/vue3%20--%20add%20add%20sass/">
+									<time>04-28</time>
+									
+										vue3 -- add add sass
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/vue/vue2%20--%20add%20element%20ui%20_%20plus/">
+									<time>04-28</time>
+									
+										vue2 -- add element ui / plus
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/vue/vue1%20--%20vue%20cli%20create%20project/">
+									<time>04-28</time>
+									
+										vue1 -- vue cli create project
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/sql/sql%20--%20cursor/">
+									<time>04-28</time>
+									
+										sql -- cursor
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/dotnet/dotnet%20--%205.%20%E4%B8%AD%E9%97%B4%E4%BB%B6%20Middleware/">
+									<time>04-28</time>
+									
+										dotnet -- 5. 中间件 Middleware
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/dotnet/dotnet%20--%204.%20set%20%E8%B7%A8%E5%9F%9F%20Cors/">
+									<time>04-28</time>
+									
+										dotnet -- 4. set 跨域 Cors
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/dotnet/dotnet%20--%203.%20linux%20install%20dotnet/">
+									<time>04-28</time>
+									
+										dotnet -- 3. linux install dotnet
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/dotnet/dotnet%20--%202.%20set%20nuget/">
+									<time>04-28</time>
+									
+										dotnet -- 2. set nuget
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/code/dotnet/dotnet%20--%201.%20publish/">
+									<time>04-28</time>
+									
+										dotnet -- 1. publish
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/linux/linux%20--%20ubuntu%20config%20root/">
+									<time>04-28</time>
+									
+										linux -- ubuntu config root
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/linux/linux%20--%20linux%20cmd/">
+									<time>04-28</time>
+									
+										linux -- linux cmd
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/hexo/Hello%20World/">
+									<time>04-28</time>
+									
+										Hello World
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/hexo/Create%20Hexo/">
+									<time>04-28</time>
+									
+										Create Hexo
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/git/linux%20%E4%B8%8B%20git%20%E5%85%8D%E5%AF%86/">
+									<time>04-28</time>
+									
+										linux 下 git 免密
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/git/git%20%E5%91%BD%E4%BB%A4%E5%B0%8F%E8%AE%B0/">
+									<time>04-28</time>
+									
+										git 命令小记
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/docker/docker%20--%207.%20AList%20%E7%BD%91%E7%9B%98%E6%8C%82%E8%BD%BD/">
+									<time>04-28</time>
+									
+										docker -- 7. AList 网盘挂载
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/docker/docker%20--%206.%20trilium%20%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/">
+									<time>04-28</time>
+									
+										docker -- 6. trilium 博客系统
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/docker/docker%20--%205.%20filebrowser%20%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+									<time>04-28</time>
+									
+										docker -- 5. filebrowser 文件服务器
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/docker/docker%20--%204.%20nginx/">
+									<time>04-28</time>
+									
+										docker -- 4. nginx
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/docker/docker%20--%203.%20ddns-go/">
+									<time>04-28</time>
+									
+										docker -- 3. ddns-go
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/docker/docker%20--%202.%20mysql%20install/">
+									<time>04-28</time>
+									
+										docker -- 2. mysql install
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/shell/docker/docker%20--%201.%20Dockerfile/">
+									<time>04-28</time>
+									
+										docker -- 1. Dockerfile
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/other/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/%E5%8D%97%E4%BC%A0%20UNT413a%20s905l3a/">
+									<time>04-28</time>
+									
+										南传 UNT413a s905l3a
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/other/tools/note%20-%20Joplin%20%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6-1/">
+									<time>04-28</time>
+									
+										note - Joplin 笔记软件
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/other/tools/windows%20tools/">
+									<time>04-28</time>
+									
+										windows tools
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/other/tools/Visual%20Studio%20Code%20tools/">
+									<time>04-28</time>
+									
+										Visual Studio Code tools
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/other/dota/dota%20%E6%A2%A6%E5%A2%83%E4%BC%A4%E5%AE%B3/">
+									<time>04-28</time>
+									
+										dota 梦境伤害
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/other/tools/note%20-%20Joplin%20%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/">
+									<time>04-28</time>
+									
+										note - Joplin 笔记软件
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+	  </article>
+	
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3276,7 +3005,6 @@ npm install -g cnpm –registry&#x3D;https://registry...
   
   <!-- Custom Files side end -->
 </aside>
-
 
 
           <!--此文件用来存放一些不方便取值的变量-->
@@ -4050,7 +3778,7 @@ npm install -g cnpm –registry&#x3D;https://registry...
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":"daimu's blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"daimu's blog","author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":"daimu's blog"},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"daimu's blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":"daimu's blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.zaiyuan.cc/archives/","name":"Archive"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"daimu's blog","author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":"daimu's blog"},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"daimu's blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
