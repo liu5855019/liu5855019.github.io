@@ -35,7 +35,7 @@ jobs:
         with:
           source: ./
           destination: ./_site
-          includes: ./_reources/*
+          include: ./_reources/*
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
