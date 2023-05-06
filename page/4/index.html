@@ -1607,7 +1607,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1683209595960),
+    lastupdate: new Date(1683341564414),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc","category","tagcloud"],
@@ -2289,7 +2289,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/dotnet/dotnet -- 2. set nuget/">
+  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/iOS/iOS 13 强制白色模式/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="daimu's blog">
   </span>
@@ -2307,25 +2307,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/dotnet/dotnet%20--%202.%20set%20nuget/"  itemprop="url">
-        dotnet -- 2. set nuget
+      <a href="/code/iOS/iOS%2013%20%E5%BC%BA%E5%88%B6%E7%99%BD%E8%89%B2%E6%A8%A1%E5%BC%8F/"  itemprop="url">
+        iOS 13 强制白色模式
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        dotnet nuget
-add
-1dotnet nuget add source &#123;url&#125; -n &#123;name&#125;
+        
 
-remove
-1dotnet nuget remove source &#123;name&#125;
-
-see
-1dotnet nuget list source
+在 AppDelegate 中 加入如下代码:12345if (@available(iOS 13.0, *)) &#123;    self.window.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;&#125; else &#123;        &#125;
 
 
+2.需要在info.plist文件中添加User I...
       
     
   </div>
@@ -2341,12 +2336,12 @@ see
             <meta itemprop="url" content="https://github.com/liu5855019">
           </span>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-05-04T21:49:16+08:00">2023-05-04</time>
+        <time itemprop="dateCreated datePublished" datetime="2023-05-06T10:40:38+08:00">2023-05-06</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/code/dotnet/dotnet%20--%202.%20set%20nuget/' itemprop="url">
+          <a class='readmore' href='/code/iOS/iOS%2013%20%E5%BC%BA%E5%88%B6%E7%99%BD%E8%89%B2%E6%A8%A1%E5%BC%8F/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2362,7 +2357,7 @@ see
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/dotnet/dotnet -- 3. linux install dotnet/">
+  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/iOS/代码 与 _遗传学_ _进化论_/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="daimu's blog">
   </span>
@@ -2380,21 +2375,19 @@ see
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/dotnet/dotnet%20--%203.%20linux%20install%20dotnet/"  itemprop="url">
-        dotnet -- 3. linux install dotnet
+      <a href="/code/iOS/%E4%BB%A3%E7%A0%81%20%E4%B8%8E%20_%E9%81%97%E4%BC%A0%E5%AD%A6_%20_%E8%BF%9B%E5%8C%96%E8%AE%BA_/"  itemprop="url">
+        代码 与 "遗传学" "进化论"
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        脚本安装
-下载地址: 点击下载
+        前言前几天我看了一篇文章, 讲的就是这个, 深有感触, 于是自己用代码撸了一遍
+先讲故事 (故事是根据之前的文章写的)
 
-1bash dotnet-install.sh
-
-官网https://learn.microsoft.com/zh-cn/dotnet/core/install/linux
-
+有一块沙滩, 上面住着很多的贝壳 , 贝壳的壳上有着各种的图案. 有一天村民发现了这里, 开始捡贝壳回家…, 贝壳跟村民回家后的待遇大伙们都懂…
+但是村民不是什么贝壳都捡, 村民家里有信仰的图腾, 当发现贝壳的图案与图腾比较像的时候就跳过, 村民会留下一部分让贝壳们繁衍生...
       
     
   </div>
@@ -2410,12 +2403,12 @@ see
             <meta itemprop="url" content="https://github.com/liu5855019">
           </span>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-05-04T21:49:16+08:00">2023-05-04</time>
+        <time itemprop="dateCreated datePublished" datetime="2023-05-06T10:40:38+08:00">2023-05-06</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/code/dotnet/dotnet%20--%203.%20linux%20install%20dotnet/' itemprop="url">
+          <a class='readmore' href='/code/iOS/%E4%BB%A3%E7%A0%81%20%E4%B8%8E%20_%E9%81%97%E4%BC%A0%E5%AD%A6_%20_%E8%BF%9B%E5%8C%96%E8%AE%BA_/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2431,7 +2424,7 @@ see
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/dotnet/dotnet -- 4. set 跨域 Cors/">
+  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/dotnet/dotnet 依赖注入相关知识点/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="daimu's blog">
   </span>
@@ -2449,19 +2442,16 @@ see
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/code/dotnet/dotnet%20--%204.%20set%20%E8%B7%A8%E5%9F%9F%20Cors/"  itemprop="url">
-        dotnet -- 4. set 跨域 Cors
+      <a href="/code/dotnet/dotnet%20%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/"  itemprop="url">
+        dotnet 依赖注入相关知识点
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        .netcore cors
-配置跨域是后端职责所在
+        AddTransient瞬时模式：每次请求，都获取一个新的实例。即使同一个请求获取多次也会是不同的实例AddScoped：每次请求，都获取一个新的实例。同一个请求获取多次会得到相同的实例AddSingleton单例模式：每次都获取同一个实例
 
-核心代码如下:
- 12345678910111213141516// 从 appsetting 获取跨域列表var hostList = configuration.GetSection(&quot;Cors&quot;).GetChildren().Select(w =&gt; w.Value).ToArray();services.A...
       
     
   </div>
@@ -2477,12 +2467,401 @@ see
             <meta itemprop="url" content="https://github.com/liu5855019">
           </span>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-05-04T21:49:16+08:00">2023-05-04</time>
+        <time itemprop="dateCreated datePublished" datetime="2023-05-06T10:40:38+08:00">2023-05-06</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/code/dotnet/dotnet%20--%204.%20set%20%E8%B7%A8%E5%9F%9F%20Cors/' itemprop="url">
+          <a class='readmore' href='/code/dotnet/dotnet%20%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/dotnet/dotnet Guid to 16进制字符串/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="daimu's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="daimu's blog">
+    <meta itemprop="description" content="daimu's blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/code/dotnet/dotnet%20Guid%20to%2016%E8%BF%9B%E5%88%B6%E5%AD%97%E7%AC%A6%E4%B8%B2/"  itemprop="url">
+        dotnet Guid to 16进制字符串
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        123Guid guid = Guid.NewGuid();var id = BitConverter.ToString(guid.ToByteArray()).Replace(&quot;-&quot;, &quot;&quot;);Console.WriteLine(id);
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="DaiMu">
+            <meta itemprop="url" content="https://github.com/liu5855019">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-06T10:40:38+08:00">2023-05-06</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/code/dotnet/dotnet%20Guid%20to%2016%E8%BF%9B%E5%88%B6%E5%AD%97%E7%AC%A6%E4%B8%B2/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/dotnet/dotnet Attribute/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="daimu's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="daimu's blog">
+    <meta itemprop="description" content="daimu's blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/code/dotnet/dotnet%20Attribute/"  itemprop="url">
+        dotnet Attribute
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1234567891011121314151617// 只有在 debug 模式下才运行[Conditional(&quot;DEBUG&quot;)]public void newFunc()&#123;    Console.WriteLine(&quot;new func&quot;);&#125;// 当调用 oldFunc 的时候会报警告已弃用[Obsolete(&quot;Thi...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="DaiMu">
+            <meta itemprop="url" content="https://github.com/liu5855019">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-06T10:40:38+08:00">2023-05-06</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/code/dotnet/dotnet%20Attribute/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/dotnet/dotnet EF Code First 数据库同步/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="daimu's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="daimu's blog">
+    <meta itemprop="description" content="daimu's blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/code/dotnet/dotnet%20EF%20Code%20First%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8C%E6%AD%A5/"  itemprop="url">
+        dotnet EF Code First 数据库同步
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        DBContext 所需包:
+1234Microsoft.EntityFrameworkCoreMicrosoft.EntityFrameworkCore.DesignMicrosoft.EntityFrameworkCore.SqlServerMicrosoft.EntityFrameworkCore.Tools
+
+program 所需包:
+1Microsoft.EntityFramewo...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="DaiMu">
+            <meta itemprop="url" content="https://github.com/liu5855019">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-06T10:40:38+08:00">2023-05-06</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/code/dotnet/dotnet%20EF%20Code%20First%20%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8C%E6%AD%A5/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/dotnet/dotnet Oracle 调用存储过程/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="daimu's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="daimu's blog">
+    <meta itemprop="description" content="daimu's blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/code/dotnet/dotnet%20Oracle%20%E8%B0%83%E7%94%A8%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"  itemprop="url">
+        dotnet Oracle 调用存储过程
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        Type1. 使用 OracleConnection 调用12345678910111213141516171819public void test(string connectStr)&#123;       using (OracleConnection connection = new OracleConnection(connectStr))      &#123;         ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="DaiMu">
+            <meta itemprop="url" content="https://github.com/liu5855019">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-06T10:40:38+08:00">2023-05-06</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/code/dotnet/dotnet%20Oracle%20%E8%B0%83%E7%94%A8%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/dotnet/dotnet gRpc 客户端配置/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="daimu's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="daimu's blog">
+    <meta itemprop="description" content="daimu's blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/code/dotnet/dotnet%20gRpc%20%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/"  itemprop="url">
+        dotnet gRpc 客户端配置
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1. 包依赖 (使用 nuget 安装)Grpc.AspNetCore
+2. 复制 proto 文件3. 在项目文件中加入:123&lt;ItemGroup&gt;	&lt;Protobuf Include=&quot;Protos\greet.proto&quot; GrpcServices=&quot;Client&quot;/&gt;&lt;/ItemGroup&gt;
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="DaiMu">
+            <meta itemprop="url" content="https://github.com/liu5855019">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-06T10:40:38+08:00">2023-05-06</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/code/dotnet/dotnet%20gRpc%20%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://blog.zaiyuan.cc/code/dotnet/dotnet 利用表达式进行类型转换/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="daimu's blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="daimu's blog">
+    <meta itemprop="description" content="daimu's blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/code/dotnet/dotnet%20%E5%88%A9%E7%94%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"  itemprop="url">
+        dotnet 利用表达式进行类型转换
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        主要思想:
+两个不同的类进行映射
+利用for循环找到相同的属性
+利用表达式把属性的赋值过程给存下来生成 表达式list
+真正使用的时候, 只需要读取表达式list进行赋值就好
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/liu5855019'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="DaiMu">
+            <meta itemprop="url" content="https://github.com/liu5855019">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-05-06T10:40:38+08:00">2023-05-06</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/code/dotnet/dotnet%20%E5%88%A9%E7%94%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2524,11 +2903,11 @@ see
   <div class='md article-desc' itemprop="articleBody">
     
       
-        概念地址: https://learn.microsoft.com/zh-cn/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0
+        概念
+地址: https://learn.microsoft.com/zh-cn/aspnet/core/fundamentals/middleware/?view=aspnetcore-7.0
+
 常用中间件
 异常&#x2F;错误处理
-
-
 当应用在开发环境中运行时：
 开发人员异常页中间件 (UseDeveloperExceptionPage) 报告应用运行时错误。
 数据库错误页中间件 (UseD...
@@ -2547,7 +2926,7 @@ see
             <meta itemprop="url" content="https://github.com/liu5855019">
           </span>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-05-04T21:49:16+08:00">2023-05-04</time>
+        <time itemprop="dateCreated datePublished" datetime="2023-05-06T10:40:38+08:00">2023-05-06</time>
         
       </div>
       
@@ -2579,8 +2958,14 @@ see
           </a>
         
         <p class="current">
-          4 / 4
+          4 / 8
         </p>
+        
+          <a class="next" rel="next" href="/page/5/">
+            <section class="post next white-box shadow floatable">
+              &nbsp;下一页&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </section>
+          </a>
         
       </div>
     
@@ -2671,7 +3056,7 @@ see
 
 
     <div class='content'>
-      <a href="/tags/netcore/" style="font-size: 16.5px; color: #33446f">.netcore</a> <a href="/tags/code/" style="font-size: 14px; color: #158">code</a> <a href="/tags/cors/" style="font-size: 14px; color: #158">cors</a> <a href="/tags/cursor/" style="font-size: 14px; color: #158">cursor</a> <a href="/tags/ddns/" style="font-size: 14px; color: #158">ddns</a> <a href="/tags/docker/" style="font-size: 24px; color: #912">docker</a> <a href="/tags/dockerfile/" style="font-size: 14px; color: #158">dockerfile</a> <a href="/tags/dota/" style="font-size: 14px; color: #158">dota</a> <a href="/tags/dotnet/" style="font-size: 21.5px; color: #77223c">dotnet</a> <a href="/tags/element-ui/" style="font-size: 14px; color: #158">element_ui</a> <a href="/tags/filebrowser/" style="font-size: 14px; color: #158">filebrowser</a> <a href="/tags/git/" style="font-size: 16.5px; color: #33446f">git</a> <a href="/tags/hexo/" style="font-size: 16.5px; color: #33446f">hexo</a> <a href="/tags/ios/" style="font-size: 14px; color: #158">ios</a> <a href="/tags/joplin/" style="font-size: 16.5px; color: #33446f">joplin</a> <a href="/tags/linux/" style="font-size: 19px; color: #535">linux</a> <a href="/tags/mysql/" style="font-size: 14px; color: #158">mysql</a> <a href="/tags/nginx/" style="font-size: 14px; color: #158">nginx</a> <a href="/tags/sass/" style="font-size: 14px; color: #158">sass</a> <a href="/tags/sql/" style="font-size: 16.5px; color: #33446f">sql</a> <a href="/tags/tools/" style="font-size: 19px; color: #535">tools</a> <a href="/tags/ubuntu/" style="font-size: 14px; color: #158">ubuntu</a> <a href="/tags/vscode/" style="font-size: 14px; color: #158">vscode</a> <a href="/tags/vue/" style="font-size: 21.5px; color: #77223c">vue</a> <a href="/tags/vue-cli/" style="font-size: 14px; color: #158">vue_cli</a> <a href="/tags/windows/" style="font-size: 14px; color: #158">windows</a>
+      <a href="/tags/netcore/" style="font-size: 16px; color: #2c4774">.netcore</a> <a href="/tags/code/" style="font-size: 20px; color: #632c4b">code</a> <a href="/tags/cors/" style="font-size: 14px; color: #158">cors</a> <a href="/tags/cursor/" style="font-size: 14px; color: #158">cursor</a> <a href="/tags/ddns/" style="font-size: 14px; color: #158">ddns</a> <a href="/tags/docker/" style="font-size: 24px; color: #912">docker</a> <a href="/tags/dockerfile/" style="font-size: 14px; color: #158">dockerfile</a> <a href="/tags/dota/" style="font-size: 14px; color: #158">dota</a> <a href="/tags/dotnet/" style="font-size: 22px; color: #7e1f36">dotnet</a> <a href="/tags/element-ui/" style="font-size: 14px; color: #158">element_ui</a> <a href="/tags/filebrowser/" style="font-size: 14px; color: #158">filebrowser</a> <a href="/tags/git/" style="font-size: 16px; color: #2c4774">git</a> <a href="/tags/github/" style="font-size: 16px; color: #2c4774">github</a> <a href="/tags/hexo/" style="font-size: 16px; color: #2c4774">hexo</a> <a href="/tags/ios/" style="font-size: 22px; color: #7e1f36">ios</a> <a href="/tags/joplin/" style="font-size: 16px; color: #2c4774">joplin</a> <a href="/tags/linux/" style="font-size: 18px; color: #473a5f">linux</a> <a href="/tags/mysql/" style="font-size: 14px; color: #158">mysql</a> <a href="/tags/nginx/" style="font-size: 14px; color: #158">nginx</a> <a href="/tags/sass/" style="font-size: 14px; color: #158">sass</a> <a href="/tags/sql/" style="font-size: 16px; color: #2c4774">sql</a> <a href="/tags/tools/" style="font-size: 18px; color: #473a5f">tools</a> <a href="/tags/ubuntu/" style="font-size: 14px; color: #158">ubuntu</a> <a href="/tags/vscode/" style="font-size: 14px; color: #158">vscode</a> <a href="/tags/vue/" style="font-size: 20px; color: #632c4b">vue</a> <a href="/tags/vue-cli/" style="font-size: 14px; color: #158">vue_cli</a> <a href="/tags/windows/" style="font-size: 14px; color: #158">windows</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #158">算法</a>
     </div>
   </section>
 
@@ -2699,7 +3084,7 @@ see
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>34 篇</div>
+          <div>75 篇</div>
         </div>
       
 
@@ -2709,7 +3094,7 @@ see
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>10.5k 字</div>
+          <div>27.7k 字</div>
         </div>
       
 
@@ -2720,7 +3105,7 @@ see
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2023-05-04 日</div>
+          <div id="last-update-show">2023-05-06 日</div>
         </div>
       
     </div>
@@ -3303,7 +3688,7 @@ see
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp"];
   let index = 0;
   let IntervalParallax = null;
 
