@@ -47,21 +47,21 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>note - Joplin 笔记软件 - daimu's blog</title>
-  <meta name="keywords" content="tools,note,null">
+  <meta name="keywords" content="tools,joplin,null">
   <meta desc name="description" content="daimu's blog - daimu - daimu's blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="note - Joplin 笔记软件">
 <meta property="og:url" content="https://blog.zaiyuan.cc/other/tools/note%20-%20Joplin%20%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/index.html">
 <meta property="og:site_name" content="daimu&#39;s blog">
-<meta property="og:description" content="Joplin 笔记软件 主要功能(使用几天的感受) 完美支持 markdown 可以导出&#x2F;导入markdown 支持 tags, title, date 等 可以导出html 有客户端,  可以在客户端直接编辑, 随后同步到服务器 部署私有服务器, 数据在自己手中  地址 中文 github 地址 原版地址 wiki 地址  Docker 中使用1234567891011121314ve">
+<meta property="og:description" content="Joplin 笔记软件 主要功能&#x2F;特性 markdown  完美支持 markdown   导入导出  可以导出&#x2F;导入markdown 支持 tags, title, created, updated 等特性 的导入&#x2F;导出 可以导出 html   同步  需要下载客户端使用 不能再网页中使用 有如下多种同步模式 可以使用 docker 部署 Joplin Server">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-04-28T07:12:13.826Z">
-<meta property="article:modified_time" content="2023-04-27T23:11:58.000Z">
+<meta property="article:published_time" content="2023-05-04T13:49:16.337Z">
+<meta property="article:modified_time" content="2023-04-27T23:45:22.000Z">
 <meta property="article:author" content="daimu">
 <meta property="article:tag" content="tools">
-<meta property="article:tag" content="note">
+<meta property="article:tag" content="joplin">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1611,7 +1611,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1683187996303),
+    lastupdate: new Date(1683209595960),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc","category","tagcloud"],
@@ -2328,10 +2328,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-28T07:11:58+08:00">
+            <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-28T07:45:22+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023-04-28 07:11</p>
+    <p>更新于：2023-04-28 07:45</p>
   </a>
 </div>
 
@@ -2342,7 +2342,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：159 字</p>
+      <p>字数：149 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2366,20 +2366,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <h2 id="Joplin-笔记软件"><a href="#Joplin-笔记软件" class="headerlink" title="Joplin 笔记软件"></a>Joplin 笔记软件</h2><hr>
-<h3 id="主要功能-使用几天的感受"><a href="#主要功能-使用几天的感受" class="headerlink" title="主要功能(使用几天的感受)"></a>主要功能(使用几天的感受)</h3><ul>
+<h3 id="主要功能-x2F-特性"><a href="#主要功能-x2F-特性" class="headerlink" title="主要功能&#x2F;特性"></a>主要功能&#x2F;特性</h3><ul>
+<li><p>markdown</p>
+<ul>
 <li>完美支持 markdown</li>
+</ul>
+</li>
+<li><p>导入导出</p>
+<ul>
 <li>可以导出&#x2F;导入markdown</li>
-<li>支持 tags, title, date 等</li>
-<li>可以导出html</li>
-<li>有客户端,  可以在客户端直接编辑, 随后同步到服务器</li>
-<li>部署私有服务器, 数据在自己手中</li>
+<li>支持 tags, title, created, updated 等特性 的导入&#x2F;导出</li>
+<li>可以导出 html</li>
+</ul>
+</li>
+<li><p>同步</p>
+<ul>
+<li>需要下载客户端使用</li>
+<li>不能再网页中使用</li>
+<li>有如下多种同步模式<br><img src="/../../../_resources/fa5ab01febaf2c8ccc0bda5120ca9ffa.png" class="lazyload" data-srcset="/../../../_resources/fa5ab01febaf2c8ccc0bda5120ca9ffa.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="fa5ab01febaf2c8ccc0bda5120ca9ffa.png"></li>
+<li>可以使用 docker 部署 Joplin Server 进行同步</li>
+<li>WebDAV 同步<ul>
+<li>可以配合 AList 把网盘作为备份盘</li>
+<li>可以配合 AList 把服务器目录作为备份盘   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ***: alist 服务器地址</span></span><br><span class="line"><span class="comment"># /dav: 固定</span></span><br><span class="line"><span class="comment"># /joplin : alist 挂载目录</span></span><br><span class="line">http://***/dav/joplin</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h3 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://trilium.netlify.app/">中文 github 地址</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/zadam/trilium">原版地址</a></li>
-<li><a target="_blank" rel="noopener" href="https://trilium.netlify.app/">wiki 地址</a></li>
+<li><a target="_blank" rel="noopener" href="https://joplinapp.org/cn/">中文 官网</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/laurent22/joplin/">GitHub</a></li>
 </ul>
-<h3 id="Docker-中使用"><a href="#Docker-中使用" class="headerlink" title="Docker 中使用"></a>Docker 中使用</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.7&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">trilium:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">zadam/trilium</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">trilium</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8008</span><span class="string">:8080</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment"># 把同文件夹下的 trilium-data 目录映射到容器内</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./trilium/data:/home/node/trilium-data</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># 环境变量表示容器内笔记数据的存储路径</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TRILIUM_DATA_DIR=/home/node/trilium-data</span></span><br></pre></td></tr></table></figure>
+
   </div>
   
   
@@ -2403,20 +2421,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-04-28T15:12:13+08:00">
+          <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-04T21:49:16+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023-04-28 15:12</p>
+    <p>发布于：2023-05-04 21:49</p>
   </a>
 </div>
 
         
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-28T07:11:58+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-28T07:45:22+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023-04-28 07:11</p>
+    <p>更新于：2023-04-28 07:45</p>
   </a>
 </div>
 
@@ -2425,8 +2443,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/tools/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>tools</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/note/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>note</p></a></div>
-  <span hidden itemprop="keywords">tools note</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/tools/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>tools</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/joplin/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>joplin</p></a></div>
+  <span hidden itemprop="keywords">tools joplin</span>
 
 
         
@@ -2496,32 +2514,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/other/dota/dota%20%E6%A2%A6%E5%A2%83%E4%BC%A4%E5%AE%B3/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>dota 梦境伤害</p>
-          <p class='content'>梦境伤害
-
-
-date
-boss
-burt(e)
-remark
-
-
-
-2022-12-16 14:11:38
-魔像武者
-33.7
-
-
-
-2022-12-26 14:01:39
-艾雪拉
-32
-
-
-...</p>
+        <a class='prev' href='/other/%E7%94%B5%E8%A7%86%E7%9B%92%E5%AD%90/%E5%8D%97%E4%BC%A0%20UNT413a%20s905l3a/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>南传 UNT413a s905l3a</p>
+          <p class='content'>dtc -I dtb -O dts -o meson-g12a-s905l3a-cm311.dts meson-g12a-s905l3a-cm311.dtb
+dtc -I dtb -O dts ...</p>
         </a>
       
+      
+        <a class='next' href='/other/tools/windows%20tools/'>
+          <p class='title'>windows tools<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1. 下载工具
+Motrix
+一款全能的下载工具。支持下载 HTTP 、FTP 、BT 、磁力链接等资源。
+官网: https://motrix.app/
+
+
+qbittorrent
+据说比 m...</p>
+        </a>
       
     </div>
   
@@ -2573,7 +2583,7 @@ remark
 
 
     <div class='content'>
-      <a href="/tags/netcore/" style="font-size: 16.5px; color: #33446f">.netcore</a> <a href="/tags/cors/" style="font-size: 14px; color: #158">cors</a> <a href="/tags/cursor/" style="font-size: 14px; color: #158">cursor</a> <a href="/tags/ddns/" style="font-size: 14px; color: #158">ddns</a> <a href="/tags/docker/" style="font-size: 24px; color: #912">docker</a> <a href="/tags/dockerfile/" style="font-size: 14px; color: #158">dockerfile</a> <a href="/tags/dota/" style="font-size: 14px; color: #158">dota</a> <a href="/tags/dotnet/" style="font-size: 21.5px; color: #77223c">dotnet</a> <a href="/tags/element-ui/" style="font-size: 14px; color: #158">element_ui</a> <a href="/tags/filebrowser/" style="font-size: 14px; color: #158">filebrowser</a> <a href="/tags/git/" style="font-size: 16.5px; color: #33446f">git</a> <a href="/tags/hexo/" style="font-size: 16.5px; color: #33446f">hexo</a> <a href="/tags/linux/" style="font-size: 19px; color: #535">linux</a> <a href="/tags/mysql/" style="font-size: 14px; color: #158">mysql</a> <a href="/tags/nginx/" style="font-size: 14px; color: #158">nginx</a> <a href="/tags/note/" style="font-size: 16.5px; color: #33446f">note</a> <a href="/tags/sass/" style="font-size: 14px; color: #158">sass</a> <a href="/tags/sql/" style="font-size: 16.5px; color: #33446f">sql</a> <a href="/tags/tools/" style="font-size: 19px; color: #535">tools</a> <a href="/tags/ubuntu/" style="font-size: 14px; color: #158">ubuntu</a> <a href="/tags/vscode/" style="font-size: 14px; color: #158">vscode</a> <a href="/tags/vue/" style="font-size: 21.5px; color: #77223c">vue</a> <a href="/tags/vue-cli/" style="font-size: 14px; color: #158">vue_cli</a> <a href="/tags/windows/" style="font-size: 14px; color: #158">windows</a>
+      <a href="/tags/netcore/" style="font-size: 16.5px; color: #33446f">.netcore</a> <a href="/tags/code/" style="font-size: 14px; color: #158">code</a> <a href="/tags/cors/" style="font-size: 14px; color: #158">cors</a> <a href="/tags/cursor/" style="font-size: 14px; color: #158">cursor</a> <a href="/tags/ddns/" style="font-size: 14px; color: #158">ddns</a> <a href="/tags/docker/" style="font-size: 24px; color: #912">docker</a> <a href="/tags/dockerfile/" style="font-size: 14px; color: #158">dockerfile</a> <a href="/tags/dota/" style="font-size: 14px; color: #158">dota</a> <a href="/tags/dotnet/" style="font-size: 21.5px; color: #77223c">dotnet</a> <a href="/tags/element-ui/" style="font-size: 14px; color: #158">element_ui</a> <a href="/tags/filebrowser/" style="font-size: 14px; color: #158">filebrowser</a> <a href="/tags/git/" style="font-size: 16.5px; color: #33446f">git</a> <a href="/tags/hexo/" style="font-size: 16.5px; color: #33446f">hexo</a> <a href="/tags/ios/" style="font-size: 14px; color: #158">ios</a> <a href="/tags/joplin/" style="font-size: 16.5px; color: #33446f">joplin</a> <a href="/tags/linux/" style="font-size: 19px; color: #535">linux</a> <a href="/tags/mysql/" style="font-size: 14px; color: #158">mysql</a> <a href="/tags/nginx/" style="font-size: 14px; color: #158">nginx</a> <a href="/tags/sass/" style="font-size: 14px; color: #158">sass</a> <a href="/tags/sql/" style="font-size: 16.5px; color: #33446f">sql</a> <a href="/tags/tools/" style="font-size: 19px; color: #535">tools</a> <a href="/tags/ubuntu/" style="font-size: 14px; color: #158">ubuntu</a> <a href="/tags/vscode/" style="font-size: 14px; color: #158">vscode</a> <a href="/tags/vue/" style="font-size: 21.5px; color: #77223c">vue</a> <a href="/tags/vue-cli/" style="font-size: 14px; color: #158">vue_cli</a> <a href="/tags/windows/" style="font-size: 14px; color: #158">windows</a>
     </div>
   </section>
 
@@ -2598,7 +2608,7 @@ remark
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Joplin-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">Joplin 笔记软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD-%E4%BD%BF%E7%94%A8%E5%87%A0%E5%A4%A9%E7%9A%84%E6%84%9F%E5%8F%97"><span class="toc-number">1.1.</span> <span class="toc-text">主要功能(使用几天的感受)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%B0%E5%9D%80"><span class="toc-number">1.2.</span> <span class="toc-text">地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker-%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.</span> <span class="toc-text">Docker 中使用</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Joplin-%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">Joplin 笔记软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD-x2F-%E7%89%B9%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text">主要功能&#x2F;特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%B0%E5%9D%80"><span class="toc-number">1.2.</span> <span class="toc-text">地址</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3182,7 +3192,7 @@ remark
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3411,7 +3421,7 @@ remark
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":"daimu's blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.zaiyuan.cc/other/tools/note - Joplin 笔记软件/","name":"note - Joplin 笔记软件"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"daimu's blog","author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":"daimu's blog"},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"note - Joplin 笔记软件","description":"daimu's blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.zaiyuan.cc/other/tools/note%20-%20Joplin%20%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/"},"author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.zaiyuan.cc/other/tools/note%20-%20Joplin%20%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/","wordCount":0,"datePublished":"2023-04-28T07:12:13.826Z","dateModified":"2023-04-27T23:11:58.000Z","keywords":"tools,note","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","sameAs":["https://github.com/volantis-x"],"description":"daimu's blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.zaiyuan.cc/","name":"daimu's blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.zaiyuan.cc/other/tools/note - Joplin 笔记软件/","name":"note - Joplin 笔记软件"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","keywords":null,"description":"daimu's blog","author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/","description":"daimu's blog"},"publisher":{"@type":"Organization","name":"daimu's blog","url":"https://blog.zaiyuan.cc/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.zaiyuan.cc?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"note - Joplin 笔记软件","description":"daimu's blog","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.zaiyuan.cc/other/tools/note%20-%20Joplin%20%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/"},"author":{"@type":"Person","name":"daimu","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.zaiyuan.cc/"},"publisher":{"@type":"Organization","name":"daimu's blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.zaiyuan.cc/other/tools/note%20-%20Joplin%20%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/","wordCount":0,"datePublished":"2023-05-04T13:49:16.337Z","dateModified":"2023-04-27T23:45:22.000Z","keywords":"tools,joplin","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
